@@ -8,6 +8,7 @@ const Header = () => {
 
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
+        console.log('clicked');
     };
 
     const handleClickOutside = (event) => {
@@ -54,7 +55,7 @@ const Header = () => {
                         <li><Link onClick={toggleSidebar} to='/contact-us'>Contact Us</Link></li>
                         <li><Link onClick={toggleSidebar} className="btn">Get Started</Link></li>
                     </ul>
-                    <button className="hamburger" onClick={toggleSidebar}>
+                    <button className={!isSidebarOpen ? 'hamburger' : 'hidden'} onClick={toggleSidebar}>
                         <FaBars />
                     </button>
                     {isSidebarOpen && <div className="close-sidebar"><button onClick={toggleSidebar}><RiCloseLine /></button></div>}

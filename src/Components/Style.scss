@@ -1,5 +1,6 @@
 @import 'variables';
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -135,6 +136,18 @@ nav {
                 color: $background-color;
             }
         }
+        .hidden {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+
+            @media (max-width: 790px) {
+                display: block;
+                color: $background-color;
+            }
+        }
     }
 }
 
@@ -162,7 +175,7 @@ footer {
         border-bottom: 1px solid $white-color;
         margin: 0 auto;
 
-        .right{
+        .right {
             padding: 0 20px;
             text-align: end;
             margin-bottom: .5rem;
@@ -200,7 +213,8 @@ footer {
                     font-size: 18px;
                     margin-bottom: 20px;
                 }
-                .address{
+
+                .address {
                     align-items: flex-start;
                 }
 
@@ -277,10 +291,10 @@ footer {
 @media (max-width: 830px) {
     .bottom-nav .in .nav-links {
         position: fixed;
-        top: 81px;
+        top: 88px;
         right: 0;
         height: calc(100% - 81px);
-        width: 250px;
+        width: 220px;
         background: $sidebar-background-color;
         backdrop-filter: blur(1px);
         z-index: 1000;
@@ -302,20 +316,22 @@ footer {
             }
         }
     }
-    .bottom-nav .in .close-sidebar{
-            display: flex;
-            color: $background-color;
+
+    .bottom-nav .in .close-sidebar {
+        display: flex;
+        button{
+             color: $background-color;
+        }
     }
 
-   
+
     .bottom-nav .in .hamburger {
         display: block;
         color: $background-color;
+    }
 
-        // Hide hamburger when the menu is open
-        &.hidden {
-            display: none;
-        }
+    .bottom-nav .in .hidden {
+        display: none;
     }
 }
 
@@ -338,7 +354,7 @@ footer {
 
 @media (max-width: 500px) {
     nav .contact {
-       width: 100%;
+        width: 100%;
     }
 }
 
@@ -358,6 +374,7 @@ footer {
         flex: 0 0 100%;
         max-width: 100%;
     }
+
     footer .container .right {
         padding: 0 20px;
         text-align: center;
