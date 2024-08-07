@@ -50,16 +50,39 @@ nav {
         background: $Base-fifth-color;
         box-shadow: 0px 4px 40px 0px #00000029;
          .in .nav-links li a {
-            color: $Base-first-color; // Change link color when scrolled
+            color: $Base-first-color; 
         }
 
         .in .nav-links li a.btn {
-            border-color: $Base-first-color; // Change button border color when scrolled
-            color: $Base-first-color; // Change button text color when scrolled
+            border-color: $Base-first-color; 
+            color: $Base-first-color; 
             &:hover {
-                background: $Base-first-color; // Change button background on hover when scrolled
-                color: $Base-fifth-color; // Change button text color on hover when scrolled
-                border-color: $Base-first-color; // Change button border color on hover when scrolled
+                background: $Base-first-color; 
+                color: $Base-fifth-color; 
+                border-color: $Base-first-color; 
+            }
+        }
+
+
+       .in .close-sidebar {
+            display: flex;
+    
+            button {
+                color: $Base-first-color;
+            }
+        }
+    
+    
+       .in .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+
+            @media (max-width: 790px) {
+                display: block;
+                color: $Base-first-color;
             }
         }
     }
@@ -142,7 +165,7 @@ nav {
 
             @media (max-width: 790px) {
                 display: block;
-                color: $background-color;
+                color: $Base-fifth-color;
             }
         }
 
@@ -332,14 +355,14 @@ footer {
         display: flex;
 
         button {
-            color: $background-color;
+            color: $Base-fifth-color;
         }
     }
 
 
     .bottom-nav .in .hamburger {
         display: block;
-        color: $background-color;
+        color: $Base-fifth-color;
     }
 
     .bottom-nav .in .hidden {
