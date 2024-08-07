@@ -5,10 +5,14 @@ import { RiCloseLine } from 'react-icons/ri';
 
 const Header = () => {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
 
     const toggleSidebar = () => {
         setIsSidebarOpen(!isSidebarOpen);
-        console.log('clicked');
+    };
+
+    const handleScroll = () => {
+        setIsScrolled(window.scrollY > 70);
     };
 
     const handleClickOutside = (event) => {
@@ -18,13 +22,11 @@ const Header = () => {
     };
 
     useEffect(() => {
-        if (isSidebarOpen) {
-            document.addEventListener('click', handleClickOutside);
-        } else {
-            document.removeEventListener('click', handleClickOutside);
-        }
+        window.addEventListener('scroll', handleScroll);
+        document.addEventListener('click', handleClickOutside);
 
         return () => {
+            window.removeEventListener('scroll', handleScroll);
             document.removeEventListener('click', handleClickOutside);
         };
     }, [isSidebarOpen]);
@@ -34,14 +36,14 @@ const Header = () => {
             <nav>
                 <div className="contact">
                     <a href="tel:+919000110009">
-                        <span>+91 ########09</span>
+                        <span>+91 94331-19893</span>
                     </a>
                     <a href="mailto:demo@example.com">
-                        <span>Demo@gmail.com</span>
+                        <span>ashisnaskar379@gmail.com</span>
                     </a>
                 </div>
             </nav>
-            <div className="bottom-nav">
+            <div className={`bottom-nav ${isScrolled ? 'scrolled' : ''}`}>
                 <div className="in">
                     <div className="logo">
                         <Link to='/'><img src={"Logo"} alt="Happy Nook Associates" /></Link>

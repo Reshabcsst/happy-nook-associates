@@ -28,7 +28,7 @@ const Footer = () => {
                         <h3>Contact Us</h3>
                         <p><Call sx={{ fontSize: '20px' }} /> +91 94331-19893</p>
                         <p><Call sx={{ fontSize: '20px' }} /> +91 98360-75869</p>
-                        <p><Mail sx={{ fontSize: '20px' }} /> demo@gmail.com</p>
+                        <p><Mail sx={{ fontSize: '20px' }} /> ashisnaskar379@gmail.com</p>
                         <p className='address'><LocationCity sx={{ fontSize: '20px' }} />11, Latoo Babu Lane. Kolkata-700006 (Opp. Bedon Street Post Office)</p>
                     </div>
                     <div className="col">

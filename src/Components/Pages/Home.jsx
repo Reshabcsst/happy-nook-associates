@@ -1,9 +1,10 @@
 import React from 'react'
+import Banner from '../Common/Banner'
 
 const Home = () => {
   return (
-    <div style={{height:"500px",width:"100%"}}>
-      
+    <div>
+      <Banner/>
     </div>
   )
 }

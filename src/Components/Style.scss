@@ -9,8 +9,6 @@
 header {
     position: fixed;
     width: 100%;
-    --header-height: fit-content;
-    height: var(--header-height);
     z-index: 200;
     display: flex;
     flex-direction: column;
@@ -20,7 +18,7 @@ header {
 
 nav {
     padding: 5px 20px;
-    background-color: $background-color;
+    background-color: $Base-first-color;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -32,31 +30,39 @@ nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        color: $white-color;
 
         a {
             text-decoration: none;
-            color: $white-color;
-
-            span {
-                margin-right: 10px;
-            }
-        }
-
-        .social-icons a {
-            color: $white-color;
-            margin-right: 10px;
+            color: $Base-fifth-color;
         }
     }
 }
 
 .bottom-nav {
     width: 100%;
-    background: $bottom-nav-bg-color;
+    background: transparent;
     display: flex;
-    box-shadow: 0px 4px 40px 0px #00000029;
     justify-content: center;
     align-items: center;
+    transition: all .6s ease-in-out;
+
+    &.scrolled {
+        background: $Base-fifth-color;
+        box-shadow: 0px 4px 40px 0px #00000029;
+         .in .nav-links li a {
+            color: $Base-first-color; // Change link color when scrolled
+        }
+
+        .in .nav-links li a.btn {
+            border-color: $Base-first-color; // Change button border color when scrolled
+            color: $Base-first-color; // Change button text color when scrolled
+            &:hover {
+                background: $Base-first-color; // Change button background on hover when scrolled
+                color: $Base-fifth-color; // Change button text color on hover when scrolled
+                border-color: $Base-first-color; // Change button border color on hover when scrolled
+            }
+        }
+    }
 
     .in {
         margin: 0 20px;
@@ -82,7 +88,7 @@ nav {
                 position: relative;
 
                 a {
-                    color: $background-color;
+                    color: $Base-fifth-color;
                     text-decoration: none;
                     font-weight: 500;
                     display: flex;
@@ -95,7 +101,7 @@ nav {
                         display: block;
                         width: 0;
                         height: 2px;
-                        background: $purple-btn-bg-color;
+                        background: $Base-first-color;
                         transition: width 0.3s;
                         position: absolute;
                         bottom: 0;
@@ -108,16 +114,19 @@ nav {
                     }
 
                     &:not(.btn):hover {
-                        color: $purple-btn-bg-color;
+                        color: $Base-first-color;
                     }
 
                     &.btn {
-                        background-color: $purple-btn-bg-color;
+                        border: 2px solid $Base-fifth-color;
                         border-radius: 20px;
-                        color: $white-color;
+                        color: $Base-fifth-color;
+                        transition: all .3s ease-in;
 
                         &:hover {
-                            background: $button-hover-bg-color;
+                            background: $Base-first-color;
+                            color: $Base-fifth-color;
+                            border:2px solid  $Base-first-color;
                         }
                     }
                 }
@@ -136,6 +145,7 @@ nav {
                 color: $background-color;
             }
         }
+
         .hidden {
             display: none;
             background: none;
@@ -165,19 +175,19 @@ nav {
 
 // Footer
 footer {
-    background: $background-color-footer;
-    color: $white-color;
+    background: $Base-first-color;
+    color: $Base-fifth-color;
     padding: 40px 0;
 
     .container {
         max-width: 1285px;
         width: 100%;
-        border-bottom: 1px solid $white-color;
+        border-bottom: 1px solid $Base-fifth-color;
         margin: 0 auto;
 
         .right {
-            padding: 0 20px;
-            text-align: end;
+            text-align: center;
+            font-size: 11px;
             margin-bottom: .5rem;
         }
 
@@ -230,7 +240,7 @@ footer {
                     list-style: none;
 
                     li a {
-                        color: $white-color;
+                        color: $Base-fifth-color;
                         text-decoration: none;
                         line-height: 2;
                     }
@@ -240,8 +250,8 @@ footer {
                     display: flex;
 
                     a {
-                        color: $white-color;
-                        background: $purple-btn-bg-color;
+                        color: $Base-first-color;
+                        background: $Base-fourth-color;
                         padding: .5rem;
                         border-radius: 12px;
                         margin-right: 10px;
@@ -257,7 +267,8 @@ footer {
                         }
 
                         &:hover {
-                            background: $button-hover-bg-color;
+                            background: $Base-first-color;
+                            color: $Base-fourth-color;
                         }
                     }
                 }
@@ -319,8 +330,9 @@ footer {
 
     .bottom-nav .in .close-sidebar {
         display: flex;
-        button{
-             color: $background-color;
+
+        button {
+            color: $background-color;
         }
     }
 
@@ -379,5 +391,9 @@ footer {
         padding: 0 20px;
         text-align: center;
         margin-bottom: 0.5rem;
+    }
+
+    nav .contact a span {
+        font-size: 13px;
     }
 }
