@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
+import LogoDark from './Assets/Logo-dark.png';
+import LogoLight from './Assets/Logo-light.png';
 import { RiCloseLine } from 'react-icons/ri';
 
 const Header = () => {
@@ -46,7 +48,8 @@ const Header = () => {
             <div className={`bottom-nav ${isScrolled ? 'scrolled' : ''}`}>
                 <div className="in">
                     <div className="logo">
-                        <Link to='/'><img src={"Logo"} alt="Happy Nook Associates" /></Link>
+                       {!isScrolled && <Link to='/'><img src={LogoLight} alt="Happy Nook Associates" /></Link>}
+                       {isScrolled && <Link to='/'><img src={LogoDark} alt="Happy Nook Associates" /></Link>}
                     </div>
                     <ul className={`nav-links ${isSidebarOpen ? 'open' : ''}`}>
                         <li><Link onClick={toggleSidebar} to='/'>Home</Link></li>

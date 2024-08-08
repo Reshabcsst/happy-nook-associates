@@ -3,6 +3,7 @@ import './Style.scss';
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { RiTwitterXLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
+import LogoLight from './Assets/Logo-light.png';
 import { Call, LocationCity, Mail } from '@mui/icons-material';
 
 const Footer = () => {
@@ -11,8 +12,8 @@ const Footer = () => {
             <div className="container">
                 <div className="row">
                     <div className="col">
-                        <Link to='/'><img src={"Logo"} alt="logo" /></Link>
-                        <h3>HAPPY NOOK ASSOCIATES</h3>
+                        <Link to='/'><img src={LogoLight} alt="logo" /></Link>
+                        {/* <h3>HAPPY NOOK ASSOCIATES</h3> */}
                         <p>At Happy Nook Associates, we combine expertise with innovation to deliver high-quality engineering and construction services. Our team is dedicated to excellence in project management, design, and execution, ensuring that every project meets your highest standards.</p>
                     </div>
                     <div className="col">
