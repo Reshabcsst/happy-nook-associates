@@ -1,0 +1,138 @@
+@import '../variables';
+
+.about {
+    width: 100%;
+    display: flex;
+    padding: 5rem 2rem;
+    min-height: 600px;
+
+
+    .lft {
+        width: 70%;
+        padding: 4rem;
+        display: flex;
+        gap: 1rem;
+        background: url('../Assets/halftone_texture_border_background.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        @media screen and (max-width:857px) {
+
+            width: 100%;
+
+        }
+
+
+        .l {
+            width: 50%;
+            display: flex;
+            padding: 1rem;
+            gap: .5rem;
+            flex-direction: column;
+            justify-content: center;
+
+            h2 {
+                color: $Base-first-color;
+                font-size: 28px;
+            }
+
+            h3 {
+                font-size: 18px;
+                font-weight: 500;
+                color: $Base-first-color;
+
+            }
+
+            p {
+                color: black;
+                font-size: 16px;
+            }
+        }
+
+        .r {
+            width: 50%;
+            gap: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-right: 100px;
+
+            p {
+                color: $global-color-text;
+            }
+
+            button {
+                width: fit-content;
+
+            }
+
+        }
+
+        @media screen and (max-width:1111px) {
+
+            flex-direction: column;
+
+            .l {
+                width: 85%;
+            }
+
+            .r {
+                width: 85%;
+                padding: 1rem;
+            }
+
+        }
+
+        @media screen and (max-width:650px) {
+            padding: 2rem;
+            margin-bottom: 2rem;
+
+            .l {
+                width: 100%;
+            }
+
+            .r {
+                width: 100%;
+            }
+
+        }
+
+        @media screen and (max-width:400px) {
+            padding: 1rem;
+        }
+    }
+
+
+    .rht {
+        margin: auto 0;
+        max-width: 500px;
+        height: 90%;
+        margin-left: -120px;
+
+        @media screen and (max-width:857px) {
+            max-width: 90%;
+            margin-left: 0px;
+            margin: 0 auto;
+        }
+
+        img {
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: auto 0;
+
+            @media screen and (max-width:857px) {
+                margin-top: -50px;
+            }
+        }
+    }
+
+    @media screen and (max-width:857px) {
+
+        flex-direction: column;
+
+    }
+}

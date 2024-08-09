@@ -36,7 +36,7 @@ const Footer = () => {
                         <h3>Social Media</h3>
                         <div className="social-icons">
                             <a href="#"><FaFacebookF /></a>
-                            <a href="#"><FaInstagram /></a>
+                            <a href="https://www.instagram.com/offical_happynook/?utm_source=qr&igsh=MWs3NmIwaGZiZWk2eQ%3D%3D"><FaInstagram /></a>
                             <a href="#"><RiTwitterXLine /></a>
                             <a href="#"><FaLinkedinIn /></a>
                         </div>
