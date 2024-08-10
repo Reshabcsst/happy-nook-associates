@@ -33,9 +33,17 @@ const Banner = () => {
 
             <div className="texts">
                 <p className='fisrt-tag'>We invest in people.</p>
-                <h1 className='heading'>Identify opportunities<span>,</span> overcome challenges <span>,</span>
+                <h1 className='heading'>Identify opportunities<span>,</span> overcome challenges<span>,</span>
                     maximize potential<span>,</span> achieve fulfillment<span>.</span></h1>
                 <p className='subheading'>At Happy Nook Associates (HNA), we strive to be an extension of your team, not just an engineering consultant. We are passionate about every project we do – whether it be a mid-rise or a site inspection.</p>
+                <div className="btns">
+                    <button className='button-contained'>
+                        Get In Touch
+                    </button>
+                    <button className='button-outlined'>
+                        Portfolio
+                    </button>
+                </div>
             </div>
         </div>
     )
