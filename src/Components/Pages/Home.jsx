@@ -1,12 +1,14 @@
-import React from 'react'
-import Banner from '../Common/Banner'
-import ImageScroll from '../Common/ImageScroll'
+import React from 'react';
+import Banner from '../Common/Banner';
+import About from '../Component/About';
+import Services from '../Component/Services';
 
 const Home = () => {
   return (
     <div>
-      <Banner/>
-      <ImageScroll/>
+      <Banner />
+      <About />
+      <Services />
     </div>
   )
 }
