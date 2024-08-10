@@ -1,14 +1,10 @@
-import React from 'react';
-import Banner from '../Common/Banner';
-import About from '../Component/About';
-import Services from '../Component/Services';
+import React from 'react'
+import Banner from '../Common/Banner'
 
 const Home = () => {
   return (
     <div>
-      <Banner />
-      <About />
-      <Services />
+      <Banner/>
     </div>
   )
 }
