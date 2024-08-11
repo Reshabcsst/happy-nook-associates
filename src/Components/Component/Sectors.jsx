@@ -5,7 +5,7 @@ const Sectors = () => {
     return (
         <div className='sectors'>
             <div className="dt container">
-                <div className="inr">
+                <div  data-aos="fade-left" className="inr">
                     <h2>Our Sectors<span>.</span></h2>
                     <p>At Happy Nook Associates, we strive to be an extension of your team, not just an engineering consultant. We exist to create opportunity, to overcome challanges, and to maximize potential in all industries we serve.</p>
                     <div className="sector">

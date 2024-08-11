@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './Styles.scss';
 import about from '../Assets/About-img.jpg';
 
@@ -8,7 +8,7 @@ const About = () => {
             <div className="lft">
                 <div className="l">
                     <h2>About Us</h2>
-                    <h3>Core Purpose</h3>
+                    <h3 data-aos="fade-right">Core Purpose</h3>
                     <p>Happy Nook Associates works to create architectural plans related to buildings as well as Structural Designs and deals with construction related matters and Development.</p>
                 </div>
                 <div className="r">
@@ -19,7 +19,7 @@ const About = () => {
                     </button>
                 </div>
             </div>
-            <div className="rht">
+            <div data-aos="fade-up" className="rht">
                 <img src={about} alt="about" />
             </div>
         </div>

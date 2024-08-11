@@ -13,6 +13,7 @@ import './Style.scss';
 
 const Banner = () => {
     const [activeIndex, setActiveIndex] = useState(0);
+
     const images = [
         Pic6,
         Pic3,
@@ -46,11 +47,11 @@ const Banner = () => {
             />
 
             <div className="texts">
-                <p className='fisrt-tag'>We invest in people.</p>
-                <h1 className='heading'>Identify opportunities<span>,</span> overcome challenges<span>,</span>
+                <p data-aos="fade-right" className='fisrt-tag'>We invest in people.</p>
+                <h1 data-aos="fade-right" data-aos-duration='1000' className='heading'>Identify opportunities<span>,</span> overcome challenges<span>,</span>
                     maximize potential<span>,</span> achieve fulfillment<span>.</span></h1>
-                <p className='subheading'>At Happy Nook Associates (HNA), we strive to be an extension of your team, not just an engineering consultant. We are passionate about every project we do – whether it be a mid-rise or a site inspection.</p>
-                <div className="btns">
+                <p data-aos="fade-right" data-aos-duration="500" className='subheading'>At Happy Nook Associates (HNA), we strive to be an extension of your team, not just an engineering consultant. We are passionate about every project we do – whether it be a mid-rise or a site inspection.</p>
+                <div data-aos="fade-right" data-aos-duration="5000" className="btns">
                     <button className='button-contained'>
                         Get In Touch
                     </button>

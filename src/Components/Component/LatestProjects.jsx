@@ -7,6 +7,7 @@ import Project5 from '../Assets/Project5.jpg';
 import Project6 from '../Assets/Project6.jpg';
 
 const LatestProjects = () => {
+
     const LatestProjects = [
         { id: 1, image: Project1, name: 'Project One' },
         { id: 2, image: Project2, name: 'Project Two' },
@@ -20,10 +21,10 @@ const LatestProjects = () => {
             <div className="upr">
                 <div className="lft">
                     <h2>Our Latest Projects</h2>
-                    <h3>Creating Elegant Solutions<span>.</span></h3>
+                    <h3 data-aos="fade-right">Creating Elegant Solutions<span>.</span></h3>
                 </div>
                 <div className="rht">
-                    <p>From planning and design to construction administration, our portfolio highlights our diverse expertise, innovative solutions, and the successful projects that we have completed, demonstrating our ability to meet and exceed client expectations.</p>
+                    <p data-aos="fade-up">From planning and design to construction administration, our portfolio highlights our diverse expertise, innovative solutions, and the successful projects that we have completed, demonstrating our ability to meet and exceed client expectations.</p>
                 </div>
             </div>
             <div className="lwr">

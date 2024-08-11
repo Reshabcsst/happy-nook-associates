@@ -58,7 +58,7 @@ const Testimonials = () => {
         <div className='testimonials container'>
             <div className="inr">
                 <h2>Testimonials</h2>
-                <h3>Kind Words From Clients<span>.</span></h3>
+                <h3 data-aos="fade-right">Kind Words From Clients<span>.</span></h3>
                 <div className="btm">
                     <div className="lft-sec">
                         <Carousel

@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import './Styles.scss';
+import Aos from 'aos';
 
 const Services = () => {
+    useEffect(() => {
+        Aos.init({ duration: 1000 });
+    }, [])
     const ServiceData = [
         {
             id: 1,
@@ -34,10 +38,10 @@ const Services = () => {
     return (
         <div className='services container'>
             <h3>Our Services</h3>
-            <h4>Architecture<span>.</span> Engineering<span>.</span> Construction<span>.</span></h4><span></span>
+            <h4 data-aos="fade-right">Architecture<span>.</span> Engineering<span>.</span> Construction<span>.</span></h4><span></span>
             <div className="fc">
                 {ServiceData.slice(0, 2).map((data, index) => (
-                    <div key={index} className={`service-card`}>
+                    <div data-aos="fade-up" data-aos-duration={`${500 + index * 500}`} key={index} className={`service-card`}>
                         <h3>{data.name}</h3>
                         <p>{data.details}</p>
                         <button className='service-btn'><FaArrowRight /> Learn More</button>
@@ -47,7 +51,7 @@ const Services = () => {
 
             <div className="sc">
                 {ServiceData.slice(2, 5).map((data, index) => (
-                    <div key={index} className={`service-card1`}>
+                    <div data-aos="fade-up" data-aos-duration={`${500 + index * 500}`} key={index} className={`service-card1`}>
                         <h3>{data.name}</h3>
                         <p>{data.details}</p>
                         <button className='service-btn'><FaArrowRight /> Learn More</button>
