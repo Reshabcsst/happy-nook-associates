@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import './Styles.scss';
 import about from '../Assets/About-img.jpg';
@@ -28,5 +27,3 @@ const About = () => {
 };
 
 export default About;
-=======
->>>>>>> 7eea7fed2356b029f837d87676cee676ba885310
