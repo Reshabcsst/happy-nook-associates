@@ -3,6 +3,8 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: "Ubuntu", sans-serif;
+    font-style: normal;
     box-sizing: border-box;
 }
 
@@ -23,9 +25,9 @@
     }
 
     &:hover {
-        background: $Base-first-color;
-        color: $Base-fifth-color;
-        border-color: $Base-first-color;
+        background: $Base-second-color;
+        color: $Base-first-color;
+        border-color: $Base-second-color;
     }
 }
 
@@ -86,6 +88,7 @@ nav {
         justify-content: space-between;
 
         a {
+            font-style: normal;
             text-decoration: none;
             color: $Base-fifth-color;
         }
@@ -130,9 +133,14 @@ nav {
 
 
         .in .close-sidebar {
-            display: flex;
+            display: none;
 
             button {
+                color: $Base-first-color;
+            }
+
+            @media (max-width: 790px) {
+                display: block;
                 color: $Base-first-color;
             }
         }
@@ -179,6 +187,7 @@ nav {
                 position: relative;
 
                 a {
+                    font-style: normal;
                     color: $Base-fifth-color;
                     text-decoration: none;
                     font-weight: 500;
@@ -291,27 +300,27 @@ footer {
 
             .col {
                 flex: 0 0 25%;
-                max-width: 25%;
+                width: fit-content;
                 padding: 0 20px;
 
                 img {
                     height: 80px;
                     width: 90%;
-                    aspect-ratio: 16/9;
                     margin-bottom: 1rem;
                 }
 
                 &:nth-child(1) {
                     flex: 0 0 30%;
-                    max-width: 30%;
+                    width: fit-content;
                 }
 
                 &:nth-child(2) {
                     flex: 0 0 20%;
-                    max-width: 20%;
+                    width: fit-content;
                 }
 
                 &:nth-child(4) {
+                    width: fit-content;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -360,7 +369,7 @@ footer {
                         align-items: center;
                         transition: .3s ease;
 
-                        &:nth-child(4) {
+                        &:nth-child(5) {
                             margin-right: 0;
                         }
 
@@ -408,9 +417,9 @@ footer {
 @media (max-width: 830px) {
     .bottom-nav .in .nav-links {
         position: fixed;
-        top: 92px;
+        top: 90px;
         right: 0;
-        height: calc(100% - 92px);
+        height: calc(100% - 90px);
         background: transparent;
         width: 220px;
         backdrop-filter: blur(5px);

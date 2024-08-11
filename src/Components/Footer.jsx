@@ -1,6 +1,6 @@
 import React from 'react';
 import './Style.scss';
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
 import { RiTwitterXLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 import LogoLight from './Assets/Logo-light.png';
@@ -35,10 +35,11 @@ const Footer = () => {
                     <div className="col">
                         <h3>Social Media</h3>
                         <div className="social-icons">
-                            <a href="#"><FaFacebookF /></a>
-                            <a href="https://www.instagram.com/offical_happynook/?utm_source=qr&igsh=MWs3NmIwaGZiZWk2eQ%3D%3D"><FaInstagram /></a>
-                            <a href="#"><RiTwitterXLine /></a>
-                            <a href="#"><FaLinkedinIn /></a>
+                            <a aria-label="facebook" href="https://www.facebook.com/ashis.naskar.12?mibextid=ZbWKwL"><FaFacebookF /></a>
+                            <a aria-label="instagram" href="https://www.instagram.com/offical_happynook/?utm_source=qr&igsh=MWs3NmIwaGZiZWk2eQ%3D%3D"><FaInstagram /></a>
+                            <a aria-label="Chat on WhatsApp" href="https://wa.me/9836075849"><FaWhatsapp /></a>
+                            <a aria-label="twitter" href="#"><RiTwitterXLine /></a>
+                            <a aria-label="linkedin" href="#"><FaLinkedinIn /></a>
                         </div>
                     </div>
                 </div>

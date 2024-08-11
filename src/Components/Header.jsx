@@ -37,10 +37,10 @@ const Header = () => {
         <header>
             <nav>
                 <div className="contact">
-                    <a href="tel:+919000110009">
+                    <a href="tel:+91 9433119893">
                         <span>+91 94331-19893</span>
                     </a>
-                    <a href="mailto:demo@example.com">
+                    <a href="mailto:ashisnaskar379@gmail.com">
                         <span>ashisnaskar379@gmail.com</span>
                     </a>
                 </div>
@@ -60,7 +60,7 @@ const Header = () => {
                         <li><Link onClick={toggleSidebar} to='/contact-us'>Contact Us</Link></li>
                         <li><Link onClick={toggleSidebar} className="btn">Get Started</Link></li>
                     </ul>
-                    <button className={!isSidebarOpen ? 'hamburger' : 'hidden'} onClick={toggleSidebar}>
+                    <button aria-label="hamburger" className={!isSidebarOpen ? 'hamburger' : 'hidden'} onClick={toggleSidebar}>
                         <FaBars />
                     </button>
                     {isSidebarOpen && <div className="close-sidebar"><button onClick={toggleSidebar}><RiCloseLine /></button></div>}

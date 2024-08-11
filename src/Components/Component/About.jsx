@@ -7,12 +7,13 @@ const About = () => {
         <div className='about container'>
             <div className="lft">
                 <div className="l">
-                    <h3>About Us</h3>
-                    <h2>Core Purpose</h2>
-                    <p>For 25 years our mission has been a commitment to providing the highest quality services, going above and beyond expectations.</p>
+                    <h2>About Us</h2>
+                    <h3>Core Purpose</h3>
+                    <p>Happy Nook Associates works to create architectural plans related to buildings as well as Structural Designs and deals with construction related matters and Development.</p>
                 </div>
                 <div className="r">
-                    <p>Welcome to Happy Nook Associates, where 24 years of excellence meet innovative solutions. Founded in 2000, our company has proudly completed over 5,000 projects, earning a reputation for delivering outstanding civil services and engineering solutions.</p>
+                    <p>Our multidisciplinary experience allows us to explore unconventional solutions and unique expertise. Understanding what issues are important to our clients and community is necessary in problem solving.</p>
+                    <p>Our philosophy develops through a healthy culture that maximizes individual passion and potential. We leverage our resources to maximize our quality and profitability.</p>
                     <button className='button-contained'>
                         Our  Whole Story
                     </button>
