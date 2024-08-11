@@ -56,7 +56,6 @@ const Header = () => {
                         <li><Link onClick={toggleSidebar} to='/about-us'>About Us</Link></li>
                         <li><Link onClick={toggleSidebar} to='/service'>What We Do</Link></li>
                         <li><Link onClick={toggleSidebar} to='/about-us'>Portfolio</Link></li>
-                        <li><Link onClick={toggleSidebar} to='/partners'>Partners</Link></li>
                         <li><Link onClick={toggleSidebar} to='/contact-us'>Contact Us</Link></li>
                         <li><Link onClick={toggleSidebar} className="btn">Get Started</Link></li>
                     </ul>

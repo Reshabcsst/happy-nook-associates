@@ -14,7 +14,7 @@ const WhyChoseUs = () => {
                 <div className="overlap">
                     <div className="num" ref={ref}>
                         {inView && (
-                            <CountUp duration={5} start={0} end={10000} />
+                            <CountUp duration={5} start={0} end={1000} />
                         )}
                         +
                     </div>
