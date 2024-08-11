@@ -1,13 +1,22 @@
 import React from 'react';
+import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
 import { MdOutlineKeyboardDoubleArrowRight } from 'react-icons/md';
 
 const WhyChoseUs = () => {
+    const { ref, inView } = useInView({
+        triggerOnce: true,
+        threshold: 0.1
+    });
     return (
         <div className='why-chose-us container'>
             <div className="lft">
                 <div className="overlap">
-                    <div className="num">
-
+                    <div className="num" ref={ref}>
+                        {inView && (
+                            <CountUp duration={5} start={0} end={10000} />
+                        )}
+                        +
                     </div>
                     <p>Projects</p>
                 </div>
