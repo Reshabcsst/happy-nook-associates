@@ -38,6 +38,7 @@ const LatestProjects = () => {
                                 src={project.image}
                                 alt={project.name}
                                 className="gallery-image"
+                                loading="lazy"
                             />
                             <div className="overlay">
                                 <p className="project-name">{project.name}</p>

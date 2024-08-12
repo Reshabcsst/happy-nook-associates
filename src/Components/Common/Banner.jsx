@@ -11,7 +11,7 @@ import Pic10 from '../Assets/Bg6.jpg';
 import Pic11 from '../Assets/Bg7.jpg';
 import './Style.scss';
 
-const Banner = () => {
+const Banner = React.memo(() => {
     const [activeIndex, setActiveIndex] = useState(0);
 
     const images = [
@@ -26,6 +26,7 @@ const Banner = () => {
         Pic10,
         Pic11
     ];
+
     const nextSlide = () => {
         setActiveIndex((prevIndex) =>
             prevIndex === images.length - 1 ? 0 : prevIndex + 1
@@ -38,30 +39,42 @@ const Banner = () => {
             clearInterval(autoPlayInterval);
         };
     }, []);
+
+    useEffect(() => {
+        const preloadImages = () => {
+            images.forEach((image) => {
+                const img = new Image();
+                img.src = image;
+            });
+        };
+        preloadImages();
+    }, [images]);
+
     return (
         <div className="carousel">
             <img
                 src={images[activeIndex]}
                 alt={`Slide ${activeIndex}`}
                 className="carousel__img"
+                loading="lazy"
             />
 
             <div className="texts">
                 <p data-aos="fade-right" className='fisrt-tag'>We invest in people.</p>
-                <h1 data-aos="fade-right" data-aos-duration='1000' className='heading'>Identify opportunities<span>,</span> overcome challenges<span>,</span>
-                    maximize potential<span>,</span> achieve fulfillment<span>.</span></h1>
-                <p data-aos="fade-right" data-aos-duration="500" className='subheading'>At Happy Nook Associates (HNA), we strive to be an extension of your team, not just an engineering consultant. We are passionate about every project we do – whether it be a mid-rise or a site inspection.</p>
+                <h1 data-aos="fade-right" data-aos-duration='1000' className='heading'>
+                    Identify opportunities<span>,</span> overcome challenges<span>,</span>
+                    maximize potential<span>,</span> achieve fulfillment<span>.</span>
+                </h1>
+                <p data-aos="fade-right" data-aos-duration="500" className='subheading'>
+                    At Happy Nook Associates (HNA), we strive to be an extension of your team, not just an engineering consultant. We are passionate about every project we do – whether it be a mid-rise or a site inspection.
+                </p>
                 <div data-aos="fade-right" data-aos-duration="5000" className="btns">
-                    <button className='button-contained'>
-                        Get In Touch
-                    </button>
-                    <button className='button-outlined'>
-                        Portfolio
-                    </button>
+                    <button className='button-contained'>Get In Touch</button>
+                    <button className='button-outlined'>Portfolio</button>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+});
 
-export default Banner
+export default Banner;
