@@ -6,6 +6,7 @@ import Sectors from '../Component/Sectors';
 import LatestProjects from '../Component/LatestProjects';
 import Testimonials from '../Component/Testimonials';
 import WhyChoseUs from '../Component/WhyChoseUs';
+import Contact from '../Common/Contact';
 import 'aos/dist/aos.css';
 import Aos from 'aos';
 
@@ -22,6 +23,7 @@ const Home = () => {
       <LatestProjects />
       <Testimonials />
       <WhyChoseUs />
+      <Contact />
     </div>
   )
 }
