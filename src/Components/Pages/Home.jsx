@@ -9,6 +9,7 @@ import WhyChoseUs from '../Component/WhyChoseUs';
 import Contact from '../Common/Contact';
 import 'aos/dist/aos.css';
 import Aos from 'aos';
+import CEO from '../Component/CEO';
 
 const Home = () => {
   useEffect(() => {
@@ -23,6 +24,7 @@ const Home = () => {
       <LatestProjects />
       <Testimonials />
       <WhyChoseUs />
+      <CEO />
       <Contact />
     </div>
   )
