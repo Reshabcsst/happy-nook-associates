@@ -5,7 +5,7 @@ import bg from '../Assets/PortfolioBanner.jpg';
 import 'aos/dist/aos.css';
 import Aos from 'aos';
 
-const Portfolio = () => {
+const Portfolio = React.memo(() => {
   useEffect(() => {
     Aos.init({ duration: 1000, once: true });
   }, [])
@@ -15,6 +15,6 @@ const Portfolio = () => {
       <Contact />
     </div>
   );
-};
+});
 
 export default Portfolio;

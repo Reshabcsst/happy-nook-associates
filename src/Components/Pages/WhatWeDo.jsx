@@ -5,7 +5,7 @@ import bg from '../Assets/WhatweDobanner.jpg';
 import 'aos/dist/aos.css';
 import Aos from 'aos';
 
-const WhatWeDo = () => {
+const WhatWeDo = React.memo(() => {
     useEffect(() => {
         Aos.init({ duration: 1000, once: true });
     }, [])
@@ -15,6 +15,6 @@ const WhatWeDo = () => {
             <Contact />
         </div>
     );
-};
+});
 
 export default WhatWeDo;
