@@ -965,7 +965,7 @@ h3 {
 
 // History
 .history {
-    padding: 15px;
+    padding: 15px 15px 5rem 15px;
     display: flex;
     flex-direction: column;
 
@@ -976,15 +976,86 @@ h3 {
         span {
             color: $Base-second-color;
         }
+        @media screen and (max-width:500px) {
+            font-size: 30px;
+           }
     }
 
     .tree {
+        margin-top: 3rem;
         display: flex;
+        position: relative;
         flex-direction: column;
 
         .st {
+            position: relative;
             display: flex;
+            gap: 2rem;
             border-left: 2px solid $Base-first-color;
+            padding-left: 1rem;
+
+            @media screen and (max-width:850px) {
+                padding-left: 0;
+                gap: 1.5rem;
+            }
+
+            @media screen and (max-width:500px) {
+                gap: 1.2rem;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 50px;
+                height: 2px;
+                background: $Base-first-color;
+                top: 19px;
+                left: 0px;
+
+                @media screen and (max-width:850px) {
+                    width: 30px;
+                }
+
+                @media screen and (max-width:500px) {
+                    width: 15px;
+                }
+            }
+
+            h3 {
+                margin-left: 3rem;
+                color: $Base-second-color;
+
+                @media screen and (max-width:500px) {
+                    margin-left: 1.5rem;
+                }
+            }
+
+            .dt {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                h4 {
+                    font-size: 25px;
+                    font-weight: 500;
+                    color: $Base-first-color;
+
+                    @media screen and (max-width:500px) {
+                        font-size: 20px;
+                    }
+                }
+
+                p {
+                    color: $global-color-text;
+                    font-size: 16px;
+                    margin-bottom: 1.5rem;
+
+                    @media screen and (max-width:500px) {
+                        font-size: 14px;
+                    }
+                }
+            }
         }
     }
+
 }
