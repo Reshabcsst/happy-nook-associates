@@ -48,16 +48,16 @@ const Header = () => {
             <div className={`bottom-nav ${isScrolled ? 'scrolled' : ''}`}>
                 <div className="in">
                     <div className="logo">
-                       {!isScrolled && <Link to='/'><img src={LogoLight} alt="Happy Nook Associates" /></Link>}
-                       {isScrolled && <Link to='/'><img src={LogoDark} alt="Happy Nook Associates" /></Link>}
+                        {!isScrolled && <Link to='/'><img src={LogoLight} alt="Happy Nook Associates" /></Link>}
+                        {isScrolled && <Link to='/'><img src={LogoDark} alt="Happy Nook Associates" /></Link>}
                     </div>
                     <ul className={`nav-links ${isSidebarOpen ? 'open' : ''}`}>
                         <li><Link onClick={toggleSidebar} to='/'>Home</Link></li>
-                        <li><Link onClick={toggleSidebar} to='/about-us'>About Us</Link></li>
-                        <li><Link onClick={toggleSidebar} to='/service'>What We Do</Link></li>
-                        <li><Link onClick={toggleSidebar} to='/about-us'>Portfolio</Link></li>
-                        <li><Link onClick={toggleSidebar} to='/contact-us'>Contact Us</Link></li>
-                        <li><Link onClick={toggleSidebar} className="btn">Get Started</Link></li>
+                        <li><Link onClick={toggleSidebar} to='/about'>About Us</Link></li>
+                        <li><Link onClick={toggleSidebar} to='/what-we-do'>What We Do</Link></li>
+                        <li><Link onClick={toggleSidebar} to='/portfolio'>Portfolio</Link></li>
+                        <li><Link onClick={toggleSidebar} to='/contact'>Contact Us</Link></li>
+                        <li><Link onClick={toggleSidebar} to='/contact' className="btn">Get Started</Link></li>
                     </ul>
                     <button aria-label="hamburger" className={!isSidebarOpen ? 'hamburger' : 'hidden'} onClick={toggleSidebar}>
                         <FaBars />
