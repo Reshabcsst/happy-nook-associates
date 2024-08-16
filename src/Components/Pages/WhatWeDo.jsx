@@ -4,6 +4,7 @@ import CommonBanner from '../Common/CommonBanner';
 import bg from '../Assets/WhatweDobanner.jpg';
 import 'aos/dist/aos.css';
 import Aos from 'aos';
+import Services from '../Component/OurServices/Services';
 
 const WhatWeDo = React.memo(() => {
     useEffect(() => {
@@ -12,6 +13,7 @@ const WhatWeDo = React.memo(() => {
     return (
         <div>
             <CommonBanner heading='What We Do' bg={bg} />
+            <Services />
             <Contact />
         </div>
     );

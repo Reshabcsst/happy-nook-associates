@@ -905,7 +905,7 @@ h3 {
             font-family: "Alex Brush", cursive;
             border-bottom: 1px solid black;
             width: fit-content;
-            font-weight: 500;
+            font-weight: 600;
             font-style: italic;
         }
 
@@ -976,9 +976,10 @@ h3 {
         span {
             color: $Base-second-color;
         }
+
         @media screen and (max-width:500px) {
             font-size: 30px;
-           }
+        }
     }
 
     .tree {
@@ -1059,4 +1060,38 @@ h3 {
         }
     }
 
+}
+
+
+
+.our-services {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 15px;
+
+    h2 {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 38px;
+        text-align: center;
+        width: 70%;
+        font-weight: 500;
+        margin: 1.5rem auto 0 auto;
+    }
+
+    @media screen and (max-width:500px) {
+        h2 {
+            font-size: 12px;
+        }
+
+        h3 {
+            font-size: 31px;
+            width: 100%;
+            letter-spacing: -2px;
+            font-weight: 500;
+        }
+    }
 }

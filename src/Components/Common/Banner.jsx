@@ -34,7 +34,7 @@ const Banner = React.memo(() => {
     };
 
     useEffect(() => {
-        const autoPlayInterval = setInterval(nextSlide, 10000);
+        const autoPlayInterval = setInterval(nextSlide, 6000); 
         return () => {
             clearInterval(autoPlayInterval);
         };
@@ -42,13 +42,16 @@ const Banner = React.memo(() => {
 
     useEffect(() => {
         const preloadImages = () => {
-            images.forEach((image) => {
+            const nextIndex = (activeIndex + 1) % images.length;
+            const prevIndex = (activeIndex - 1 + images.length) % images.length;
+
+            [images[nextIndex], images[prevIndex]].forEach((image) => {
                 const img = new Image();
                 img.src = image;
             });
         };
         preloadImages();
-    }, [images]);
+    }, [activeIndex, images]);
 
     return (
         <div className="carousel">
