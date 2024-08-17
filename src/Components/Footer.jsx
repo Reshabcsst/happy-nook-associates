@@ -36,11 +36,11 @@ const Footer = () => {
                     <div className="col">
                         <h3>Social Media</h3>
                         <div className="social-icons">
-                            <a aria-label="facebook" href="https://www.facebook.com/ashis.naskar.12?mibextid=ZbWKwL"><FaFacebookF /></a>
-                            <a aria-label="instagram" href="https://www.instagram.com/offical_happynook/?utm_source=qr&igsh=MWs3NmIwaGZiZWk2eQ%3D%3D"><FaInstagram /></a>
-                            <a aria-label="Chat on WhatsApp" href="https://wa.me/9836075849"><FaWhatsapp /></a>
-                            <a aria-label="twitter" href="#"><RiTwitterXLine /></a>
-                            <a aria-label="linkedin" href="#"><FaLinkedinIn /></a>
+                            <a target="_blank" rel="noreferrer" aria-label="facebook" href="https://www.facebook.com/share/HBqbZKLFhBunMQUH/?mibextid=qi2Omg"><FaFacebookF /></a>
+                            <a target="_blank" rel="noreferrer" aria-label="instagram" href="https://www.instagram.com/offical_happynook?utm_source=qr&igsh=MWs3NmIwaGZiZWk2eQ=="><FaInstagram /></a>
+                            <a target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp" href="https://wa.me/9836075849"><FaWhatsapp /></a>
+                            <a target="_blank" rel="noreferrer" aria-label="twitter" href="https://x.com/AshisKumar379?t=ORrbcNchLpV2ycji17WNtA&s=08"><RiTwitterXLine /></a>
+                            <a target="_blank" rel="noreferrer" aria-label="linkedin" href="https://www.linkedin.com/in/happy-nook-associates-85349254?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><FaLinkedinIn /></a>
                         </div>
                     </div>
                 </div>

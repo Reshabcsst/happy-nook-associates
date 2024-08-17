@@ -1082,7 +1082,7 @@ h3 {
         margin: 1.5rem auto 0 auto;
     }
 
-    @media screen and (max-width:500px) {
+    @media screen and (max-width: 500px) {
         h2 {
             font-size: 12px;
         }
@@ -1093,12 +1093,11 @@ h3 {
             letter-spacing: -2px;
             font-weight: 500;
 
-            span{
+            span {
                 color: $Base-second-color;
             }
         }
     }
-
 
     .st {
         width: 100%;
@@ -1107,11 +1106,11 @@ h3 {
         display: flex;
         border-radius: 10px;
         overflow: hidden;
-        transition: all .3s ease;
+        transition: all 0.3s ease;
         box-shadow: 1px 15px 20px rgba(0, 0, 0, 0.164);
         border-bottom: 3px solid $white-color;
 
-        &:hover{
+        &:hover {
             border-bottom: 3px solid $Base-second-color;
         }
 
@@ -1131,22 +1130,75 @@ h3 {
             gap: 1rem;
             width: 70%;
             padding: 4rem 1rem;
-            h4{
+
+            h4 {
                 font-size: 28px;
                 color: $Base-first-color;
+
+                 // Styles for accordion arrow (optional)
+                 &::after {
+                    content: '';
+                    display: inline-block;
+                    margin-left: 10px;
+                    width: 8px;
+                    height: 8px;
+                    border-right: 2px solid $Base-first-color;
+                    border-bottom: 2px solid $Base-first-color;
+                    transform: rotate(45deg);
+                    transition: transform 0.3s ease;
+                }
             }
-            h5{
+
+            h5 {
                 margin-top: 1rem;
                 font-size: 20px;
                 color: $Base-first-color;
                 font-weight: 500;
             }
-            p{
+
+            p {
                 font-size: 16px;
                 color: $global-color-text;
             }
         }
 
+        @media screen and (max-width: 500px) {
+            flex-direction: column;
+            gap: 1rem;
 
+            .lft {
+                width: 100%;
+            }
+
+            .rht {
+                width: 100%;
+                padding: 2rem 1rem;
+
+                h4 {
+                    cursor: pointer;
+
+                    &::after {
+                        transform: rotate(225deg);
+                    }
+                }
+
+                h5,
+                p {
+                    display: none;
+                }
+
+                &.active {
+
+                    h5,
+                    p {
+                        display: block;
+                    }
+
+                    h4::after {
+                        transform: rotate(315deg);
+                    }
+                }
+            }
+        }
     }
 }
