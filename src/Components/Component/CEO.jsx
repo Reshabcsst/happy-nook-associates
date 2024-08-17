@@ -1,11 +1,12 @@
 import React from 'react';
+import bg from '../Assets/CEO.jpg';
 import './Styles.scss';
 
 const CEO = () => {
     return (
         <div className='ceo container'>
             <div className="lft">
-                <img data-aos='fade-right' src="https://media.istockphoto.com/id/1413766112/photo/successful-mature-businessman-looking-at-camera-with-confidence.jpg?s=612x612&w=0&k=20&c=NJSugBzNuZqb7DJ8ZgLfYKb3qPr2EJMvKZ21Sj5Sfq4=" alt="" />
+                <img data-aos='fade-right' src={bg} alt="CEO" />
                 <p>Ashis Naskar</p>
                 <small>Signature</small>
             </div>

@@ -8,7 +8,7 @@ const CommonBanner = ({ heading, bg }) => {
     return (
         <div className='common-banner' style={{ backgroundImage: `url(${bg})` }}>
             <h1 data-aos='fade-right'>{heading}</h1>
-            <div data-aos='fade-up' className="navigation">
+            <div data-aos="fade-in" className="navigation">
                 <span><Link to='/'>Home</Link></span><MdOutlineKeyboardDoubleArrowRight /><span>{pathname.replace(/\//g, '').replace(/-/g, ' ')}</span>
             </div>
         </div>

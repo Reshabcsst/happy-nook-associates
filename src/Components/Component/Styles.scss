@@ -661,7 +661,6 @@ h3 {
     min-height: 400px;
     padding-bottom: 5rem;
     padding-right: 15px;
-    // overflow: hidden;
     padding-left: 15px;
     display: flex;
     align-items: end;
@@ -688,6 +687,7 @@ h3 {
                 width: 70%;
 
                 .feedback {
+                    cursor: grab;
                     display: flex;
                     flex-direction: column;
                     padding-right: 1rem;
@@ -1068,9 +1068,10 @@ h3 {
     display: flex;
     flex-direction: column;
     padding: 5rem 15px;
+    transition: all .5s ease;
 
     h2 {
-        font-size: 14px;
+        font-size: 18px;
         text-align: center;
     }
 
@@ -1135,10 +1136,10 @@ h3 {
                 font-size: 28px;
                 color: $Base-first-color;
 
-                 // Styles for accordion arrow (optional)
-                 &::after {
+
+                &::after {
                     content: '';
-                    display: inline-block;
+                    display: none;
                     margin-left: 10px;
                     width: 8px;
                     height: 8px;
@@ -1164,7 +1165,7 @@ h3 {
 
         @media screen and (max-width: 500px) {
             flex-direction: column;
-            gap: 1rem;
+            gap: 0rem;
 
             .lft {
                 width: 100%;
@@ -1172,22 +1173,30 @@ h3 {
 
             .rht {
                 width: 100%;
+                height: 110px;
                 padding: 2rem 1rem;
 
                 h4 {
+                    font-size: 23px;
                     cursor: pointer;
 
                     &::after {
+                        display: inline-block;
                         transform: rotate(225deg);
                     }
                 }
 
-                h5,
+                h5{
+                    font-size: 17px;
+                    display: none;
+                }
                 p {
+                    font-size: 13px;
                     display: none;
                 }
 
                 &.active {
+                    height: fit-content;
 
                     h5,
                     p {
@@ -1195,7 +1204,7 @@ h3 {
                     }
 
                     h4::after {
-                        transform: rotate(315deg);
+                        transform: rotate(405deg);
                     }
                 }
             }

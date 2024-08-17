@@ -11,7 +11,7 @@ import Testimonials from '../Component/Testimonials';
 
 const WhatWeDo = React.memo(() => {
     useEffect(() => {
-        Aos.init({ duration: 1000, once: true });
+        Aos.init({ duration: 1000, once: true, offset: 80 });
         document.title = "What We Do - Happy Nook Associates | Building Development | Engineering Consultant | Engineers";
     }, [])
     return (

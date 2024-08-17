@@ -10,15 +10,15 @@ const Services = () => {
 
   return (
     <div className='our-services container'>
-      <h2>Our Services</h2>
-      <h3>Structural Engineering for the Architecture<span>,</span> Engineering <span>&</span> Construction Industry<span>.</span></h3>
+      <h2 data-aos="fade-in">Our Services</h2>
+      <h3 data-aos="fade-right">Structural Engineering for the Architecture<span>,</span> Engineering <span>&</span> Construction Industry<span>.</span></h3>
 
       {servicesData.map((service, index) => (
-        <div key={index} className={`st${activeIndex === index ? 'active' : ''}`}>
+        <div key={index} className="st">
           <div className="lft">
             <img src={service.img} alt={service.title} />
           </div>
-          <div className="rht">
+          <div className={`rht ${activeIndex === index ? 'active' : ''}`}>
             <h4 onClick={() => toggleAccordion(index)}>{service.title}</h4>
             {service.details.map((detail, i) => (
               <div key={i}>

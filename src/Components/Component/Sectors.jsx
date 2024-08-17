@@ -12,23 +12,16 @@ const Sectors = () => {
                         <div className="st">
                             <ul>
                                 <li><MdOutlineKeyboardDoubleArrowRight />Apartments/Condos</li>
-                                <li><MdOutlineKeyboardDoubleArrowRight />Municipal/Justice</li>
-                                <li><MdOutlineKeyboardDoubleArrowRight />Retail/Restaurants</li>
+                                <li><MdOutlineKeyboardDoubleArrowRight />Mixed Use</li>
+                                <li><MdOutlineKeyboardDoubleArrowRight />Religious Facilities</li>
                             </ul>
 
                         </div>
                         <div className="st">
                             <ul>
                                 <li><MdOutlineKeyboardDoubleArrowRight />Retrofit/Restoration</li>
-                                <li><MdOutlineKeyboardDoubleArrowRight />Hospitals/Medical</li>
-                                <li><MdOutlineKeyboardDoubleArrowRight />Office Buildings</li>
-                            </ul>
-                        </div>
-                        <div className="st">
-                            <ul>
+                                <li><MdOutlineKeyboardDoubleArrowRight />Office Buildings</li> 
                                 <li><MdOutlineKeyboardDoubleArrowRight />Hotels/Resorts</li>
-                                <li><MdOutlineKeyboardDoubleArrowRight />Mixed Use</li>
-                                <li><MdOutlineKeyboardDoubleArrowRight />Religious Facilities</li>
                             </ul>
                         </div>
                     </div>
