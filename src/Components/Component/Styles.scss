@@ -1063,7 +1063,7 @@ h3 {
 }
 
 
-
+// Our servicew
 .our-services {
     display: flex;
     flex-direction: column;
@@ -1092,6 +1092,61 @@ h3 {
             width: 100%;
             letter-spacing: -2px;
             font-weight: 500;
+
+            span{
+                color: $Base-second-color;
+            }
         }
+    }
+
+
+    .st {
+        width: 100%;
+        margin-top: 2rem;
+        gap: 1.5rem;
+        display: flex;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: all .3s ease;
+        box-shadow: 1px 15px 20px rgba(0, 0, 0, 0.164);
+        border-bottom: 3px solid $white-color;
+
+        &:hover{
+            border-bottom: 3px solid $Base-second-color;
+        }
+
+        .lft {
+            width: 30%;
+
+            img {
+                height: auto;
+                width: 100%;
+                border: 12px solid $Base-second-color;
+            }
+        }
+
+        .rht {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 70%;
+            padding: 4rem 1rem;
+            h4{
+                font-size: 28px;
+                color: $Base-first-color;
+            }
+            h5{
+                margin-top: 1rem;
+                font-size: 20px;
+                color: $Base-first-color;
+                font-weight: 500;
+            }
+            p{
+                font-size: 16px;
+                color: $global-color-text;
+            }
+        }
+
+
     }
 }

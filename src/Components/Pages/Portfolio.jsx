@@ -8,6 +8,7 @@ import Aos from 'aos';
 const Portfolio = React.memo(() => {
   useEffect(() => {
     Aos.init({ duration: 1000, once: true });
+    document.title = "Portfolio - Happy Nook Associates | Building Development | Engineering Consultant | Engineers";
   }, [])
   return (
     <div>

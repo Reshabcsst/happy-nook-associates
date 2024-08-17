@@ -12,6 +12,7 @@ import History from '../Component/AboutComponents/History';
 const AboutUs = React.memo(() => {
     useEffect(() => {
         Aos.init({ duration: 1000, once: true });
+        document.title = "About - Happy Nook Associates | Building Development | Engineering Consultant | Engineers";
     }, [])
     return (
         <div>

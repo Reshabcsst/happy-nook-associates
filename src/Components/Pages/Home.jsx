@@ -14,6 +14,7 @@ import CEO from '../Component/CEO';
 const Home = () => {
   useEffect(() => {
     Aos.init({ duration: 1000, once: true });
+    document.title = "Happy Nook Associates | Building Development | Engineering Consultant | Engineers";
   }, [])
   return (
     <div>
