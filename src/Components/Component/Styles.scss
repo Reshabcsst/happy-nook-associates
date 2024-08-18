@@ -675,6 +675,10 @@ h3 {
         padding: 2rem;
         flex-direction: column;
 
+        @media screen and (max-width:500px) {
+            padding: 1rem;
+        }
+
         h2 {
             margin-bottom: 1.5rem;
         }
@@ -1186,10 +1190,11 @@ h3 {
                     }
                 }
 
-                h5{
+                h5 {
                     font-size: 17px;
                     display: none;
                 }
+
                 p {
                     font-size: 13px;
                     display: none;

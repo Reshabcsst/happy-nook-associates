@@ -2,40 +2,9 @@ import React from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import img from '../Assets/Testimonials.png';
+import TestimonialsData from '../DemoData/TestimonialsData';
 
 const Testimonials = () => {
-    const TestimonialsData = [
-        {
-            text: '"They love to seek innovative solutions. They used a combination of modern engineering and old­school carpentry framing to achieve the energy ­efficient goal while retaining a really nice hand­built look."',
-            name: 'Asuthosh Biswas',
-            role: 'Professional Builder'
-        },
-        {
-            text: '"They love to seek innovative solutions. They used a combination of modern engineering and old­school carpentry framing to achieve the energy ­efficient goal while retaining a really nice hand­built look."',
-            name: 'Narendra Paul',
-            role: 'Professional Builder'
-        },
-        {
-            text: '"They love to seek innovative solutions. They used a combination of modern engineering and old­school carpentry framing to achieve the energy ­efficient goal while retaining a really nice hand­built look."',
-            name: 'Tony Sarkar',
-            role: 'Professional Builder'
-        },
-        {
-            text: '"They love to seek innovative solutions. They used a combination of modern engineering and old­school carpentry framing to achieve the energy ­efficient goal while retaining a really nice hand­built look."',
-            name: 'Prafulla Bera',
-            role: 'Professional Builder'
-        },
-        {
-            text: '"They love to seek innovative solutions. They used a combination of modern engineering and old­school carpentry framing to achieve the energy ­efficient goal while retaining a really nice hand­built look."',
-            name: 'Liton Shaw',
-            role: 'Professional Builder'
-        },
-        {
-            text: '"They love to seek innovative solutions. They used a combination of modern engineering and old­school carpentry framing to achieve the energy ­efficient goal while retaining a really nice hand­built look."',
-            name: 'Ramesh Hela',
-            role: 'Professional Builder'
-        }
-    ]
     const responsive = {
         superLargeDesktop: {
             breakpoint: { max: 4000, min: 3000 },
@@ -62,15 +31,10 @@ const Testimonials = () => {
                 <div className="btm">
                     <div className="lft-sec">
                         <Carousel
-                            swipeable={true}
-                            draggable={true}
                             showDots={false}
-                            ssr={true}
                             infinite={true}
                             autoPlay={true}
                             autoPlaySpeed={8000}
-                            keyBoardControl={true}
-                            transitionDuration={600}
                             arrows={false}
                             containerClass="carousel-container"
                             removeArrowOnDeviceType={["tablet", "mobile"]}
@@ -91,7 +55,6 @@ const Testimonials = () => {
                         <img src={img} alt="Testimonials" />
                     </div>
                 </div>
-
             </div>
         </div>
     );

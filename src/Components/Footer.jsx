@@ -13,17 +13,16 @@ const Footer = () => {
                 <div className="row">
                     <div className="col">
                         <Link to='/'><img src={LogoLight} alt="logo" /></Link>
-                        {/* <h3>HAPPY NOOK ASSOCIATES</h3> */}
                         <p>At Happy Nook Associates, we combine expertise with innovation to deliver high-quality engineering and construction services. Our team is dedicated to excellence in project management, design, and execution, ensuring that every project meets your highest standards.</p>
                     </div>
                     <div className="col">
                         <h3>Company</h3>
                         <ul>
                             <li><Link to='/'>Home</Link></li>
-                              <li><Link to='/about-us'>About Us</Link></li>
+                              <li><Link to='/about'>About Us</Link></li>
                             <li><Link to='/what-we-do'>What We Do</Link></li>
                             <li><Link to='/portfolio'>Portfolio</Link></li>
-                            <li><Link to='/contact-us'>Contact Us</Link></li>
+                            <li><Link to='/contact'>Contact Us</Link></li>
                         </ul>
                     </div>
                     <div className="col">
@@ -44,7 +43,6 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-
                 <p className='right'>© 2024 Happy Nook Associates. All rights reserved.</p>
             </div>
         </footer>

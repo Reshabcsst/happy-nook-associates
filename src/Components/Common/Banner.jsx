@@ -6,9 +6,12 @@ import Pic6 from '../Assets/Bg2.jpg';
 import Pic8 from '../Assets/Bg4.jpg';
 import Pic9 from '../Assets/Bg5.jpg';
 import './Style.scss';
+import { useNavigate } from 'react-router-dom';
 
 const Banner = React.memo(() => {
     const [activeIndex, setActiveIndex] = useState(0);
+
+    const navigate = useNavigate();
 
     const images = [
         Pic6,
@@ -64,8 +67,8 @@ const Banner = React.memo(() => {
                     At Happy Nook Associates (HNA), we strive to be an extension of your team, not just an engineering consultant. We are passionate about every project we do – whether it be a mid-rise or a site inspection.
                 </p>
                 <div data-aos="fade-in" data-aos-duration="5000" className="btns">
-                    <button className='button-contained'>Get In Touch</button>
-                    <button className='button-outlined'>Portfolio</button>
+                    <button onClick={() => { navigate('/contact') }} className='button-contained'>Get In Touch</button>
+                    <button onClick={() => { navigate('/portfolio') }} className='button-outlined'>Portfolio</button>
                 </div>
             </div>
         </div>

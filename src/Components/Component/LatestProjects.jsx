@@ -1,21 +1,9 @@
 import React from 'react';
-import Project1 from '../Assets/Project1.jpg';
-import Project2 from '../Assets/Project2.jpg';
-import Project3 from '../Assets/Project3.jpg';
-import Project4 from '../Assets/Project4.jpg';
-import Project5 from '../Assets/Project5.jpg';
-import Project6 from '../Assets/Project6.jpg';
+import Projects from '../DemoData/Projects';
+import { useNavigate } from 'react-router-dom';
 
 const LatestProjects = () => {
-
-    const LatestProjects = [
-        { id: 1, image: Project1, name: 'Project One' },
-        { id: 2, image: Project2, name: 'Project Two' },
-        { id: 3, image: Project3, name: 'Project Three' },
-        { id: 4, image: Project4, name: 'Project Four' },
-        { id: 5, image: Project5, name: 'Project Five' },
-        { id: 6, image: Project6, name: 'Project Six' },
-    ];
+    const navigate = useNavigate();
     return (
         <div className='latest-projects container'>
             <div className="upr">
@@ -29,7 +17,7 @@ const LatestProjects = () => {
             </div>
             <div className="lwr">
                 <div className="gallery">
-                    {LatestProjects.map((project, index) => (
+                    {Projects.slice(0, 6).map((project, index) => (
                         <div
                             key={project.id}
                             className="gallery-item"
@@ -46,7 +34,7 @@ const LatestProjects = () => {
                         </div>
                     ))}
                 </div>
-                <button className='button-contained'>See More</button>
+                <button onClick={() => { navigate('/portfolio') }} className='button-contained'>See More</button>
             </div>
         </div>
     );

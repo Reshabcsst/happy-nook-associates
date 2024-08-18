@@ -7,6 +7,7 @@ import img4 from '../Assets/expertWitness.jpg';
 const servicesData = [
     {
         title: "Planning Services",
+        smalldetails: 'Comprehensive planning services aiming to provide cost-effective and technically feasible solutions tailored to each unique project.',
         img: img,
         details: [
             {
@@ -37,6 +38,7 @@ const servicesData = [
     },
     {
         title: "Design Services",
+        smalldetails: 'Our design services utilize the latest tools and principles to ensure safety, efficiency, and adaptability.',
         img: img1,
         details: [
             {
@@ -79,6 +81,7 @@ const servicesData = [
     },
     {
         title: "Construction Administration Services",
+        smalldetails: 'Administration services that ensure quality, compliance, and effective communication throughout the construction process.',
         img: img2,
         details: [
             {
@@ -97,6 +100,7 @@ const servicesData = [
     },
     {
         title: "Inspection Services",
+        smalldetails: 'We help identify existing conditions, possible minor or hidden deficiencies, and present the information in a comprehensive report.',
         img: img3,
         details: [
             {
@@ -106,6 +110,7 @@ const servicesData = [
     },
     {
         title: "Expert Witness Services",
+        smalldetails: 'Senior staff is able to provide expert witness testimony for litigators and the property and casualty insurance industry.',
         img: img4,
         details: [
             {
@@ -117,3 +122,7 @@ const servicesData = [
 
 
 export default servicesData;
+
+
+
+
