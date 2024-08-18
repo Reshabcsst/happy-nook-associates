@@ -4,6 +4,7 @@ import CommonBanner from '../Common/CommonBanner';
 import bg from '../Assets/PortfolioBanner.jpg';
 import 'aos/dist/aos.css';
 import Aos from 'aos';
+import PortfolioProjects from '../Component/Portfolio/PortfolioProjects';
 
 const Portfolio = React.memo(() => {
   useEffect(() => {
@@ -13,6 +14,7 @@ const Portfolio = React.memo(() => {
   return (
     <div>
       <CommonBanner heading='Portfolio' bg={bg} />
+      <PortfolioProjects />
       <Contact />
     </div>
   );
