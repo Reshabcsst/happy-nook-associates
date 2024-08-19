@@ -24,20 +24,23 @@ const Contact = () => {
     };
 
     const FormSubmit = async (e) => {
-
-        console.log(process.env.REACT_APP_USER_ID)
         e.preventDefault();
-        // const token = captchaRef.current.getValue();
-        // captchaRef.current.reset();
 
         if (!formData.name || !formData.email || !formData.phone || !formData.subject || !formData.message) {
             setStatus('Please fill in all fields.');
             return;
         }
-        // if (!token) {
-        //     setStatus('Please check the captcha.');
-        //     return;
-        // }
+
+        const captchaValue = captchaRef.current.getValue();
+        if (!captchaValue) {
+            setStatus('Please check the captcha.');
+            return;
+        }
+
+        if (captchaValue) {
+            setStatus('');
+        }
+
 
         try {
             await emailjs.sendForm(
@@ -55,10 +58,12 @@ const Contact = () => {
                 subject: '',
                 message: ''
             });
+            captchaRef.current.reset();
         } catch (error) {
             setStatus('Something went wrong. Please try again later.');
         }
     };
+
 
     return (
         <div className='contact-form container'>
