@@ -58,6 +58,10 @@ const Contact = () => {
                 subject: '',
                 message: ''
             });
+
+            setTimeout(() => {
+                setStatus('');
+            }, 2000);
             captchaRef.current.reset();
         } catch (error) {
             setStatus('Something went wrong. Please try again later.');
