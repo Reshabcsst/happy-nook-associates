@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
+import emailjs from 'emailjs-com';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -10,7 +11,7 @@ const Contact = () => {
         message: ''
     });
     const captchaRef = useRef(null);
-
+    const formRef = useRef();
     const [status, setStatus] = useState('');
 
     const handleInputChange = (e) => {
@@ -23,49 +24,46 @@ const Contact = () => {
     };
 
     const FormSubmit = async (e) => {
-        e.preventDefault();
-        const token = captchaRef.current.getValue();
-        captchaRef.current.reset();
 
-        // Basic validation
+        console.log(process.env.REACT_APP_USER_ID)
+        e.preventDefault();
+        // const token = captchaRef.current.getValue();
+        // captchaRef.current.reset();
+
         if (!formData.name || !formData.email || !formData.phone || !formData.subject || !formData.message) {
             setStatus('Please fill in all fields.');
             return;
         }
-
-        // Example API endpoint (replace with your own)
-        const apiUrl = 'https://jsonplaceholder.typicode.com/posts';
+        // if (!token) {
+        //     setStatus('Please check the captcha.');
+        //     return;
+        // }
 
         try {
-            const response = await fetch(apiUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(formData)
-            });
+            await emailjs.sendForm(
+                process.env.REACT_APP_SERVICE_ID,
+                process.env.REACT_APP_TEMPLATE_ID,
+                formRef.current,
+                process.env.REACT_APP_USER_ID
+            );
 
-            if (response.ok) {
-                setStatus('Thank you for your message! We will get back to you soon.');
-                setFormData({
-                    name: '',
-                    email: '',
-                    phone: '',
-                    subject: '',
-                    message: ''
-                });
-            } else {
-                setStatus('Something went wrong. Please try again later.');
-            }
+            setStatus('Thank you for your message! We will get back to you soon.');
+            setFormData({
+                name: '',
+                email: '',
+                phone: '',
+                subject: '',
+                message: ''
+            });
         } catch (error) {
-            setStatus('An error occurred. Please try again later.');
+            setStatus('Something went wrong. Please try again later.');
         }
     };
 
     return (
         <div className='contact-form container'>
             <div className="lft">
-                <form onSubmit={FormSubmit}>
+                <form ref={formRef} onSubmit={FormSubmit}>
                     <h2>Keep in Touch<span>!</span></h2>
                     <h3>We’re thrilled you’ve decided to reach out. Whether you have a question, comment, or just want to share some feedback, we’re all ears. Fill out the form below and our team will get back to you as soon as possible.</h3>
                     <p>Thank you for your interest.</p>
@@ -105,9 +103,9 @@ const Contact = () => {
                             value={formData.message}
                             onChange={handleInputChange}
                         />
-                         {status && <p className="status-message">{status}</p>}
+                        {status && <p className="status-message">{status}</p>}
                     </div>
-                    <ReCAPTCHA sitekey={process.env.REACT_APP_SITE_KEY} ref={captchaRef} />
+                    <ReCAPTCHA className='captcha' sitekey={process.env.REACT_APP_SITE_KEY} ref={captchaRef} />
                     <button type='submit'>Submit</button>
                 </form>
             </div>

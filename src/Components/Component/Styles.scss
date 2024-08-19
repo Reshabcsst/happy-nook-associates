@@ -1365,17 +1365,21 @@ h3 {
                 }
 
                 .status-message {
-                    color: red;
                     font-size: 13px;
                     margin: 0;
                 }
             }
+            .captcha{
+                flex: 1;
+                margin-top: 1rem;
+            }
 
             button {
-                padding: .5rem 3rem;
+                padding: 1rem 3rem;
                 background: $Base-second-color;
                 color: $white-color;
                 font-size: 15px;
+                height: fit-content;
                 font-weight: 600;
                 text-transform: uppercase;
                 border-radius: 20px;
