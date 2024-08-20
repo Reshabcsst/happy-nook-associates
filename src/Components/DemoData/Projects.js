@@ -1,13 +1,13 @@
-import Project1 from '../Assets/Project1.jpg';
-import Project2 from '../Assets/Project2.jpg';
+import Project1 from '../Assets/Royal.jpeg';
+import Project2 from '../Assets/Rupal Heights.jpeg';
 import Project3 from '../Assets/Project3.jpg';
 import Project4 from '../Assets/Project4.jpg';
 import Project5 from '../Assets/Project5.jpg';
 import Project6 from '../Assets/Project6.jpg';
 
 const Projects = [
-    { id: 1, image: Project1, name: 'Project One', category: 'Apartments/Condos' },
-    { id: 2, image: Project2, name: 'Project Two', category: 'Religious Facilities' },
+    { id: 1, image: Project1, name: 'Royal Hotel', category: 'Apartments/Condos' },
+    { id: 2, image: Project2, name: 'Rupal Heights', category: 'Religious Facilities' },
     { id: 3, image: Project3, name: 'Project Three', category: 'Office Buildings' },
     { id: 4, image: Project4, name: 'Project Four', category: 'Apartments/Condos' },
     { id: 5, image: Project5, name: 'Project Five', category: 'Religious Facilities' },
