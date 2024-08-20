@@ -1,12 +1,27 @@
 import React, { useState } from 'react';
+import '../Styles.scss';
 import Projects from '../../DemoData/Projects';
 
 const PortfolioProjects = () => {
     const [selectedCategory, setSelectedCategory] = useState('all');
+    const [isFlashboxVisible, setFlashboxVisible] = useState(false);
+    const [selectedImage, setSelectedImage] = useState(null);
 
     const filteredProjects = selectedCategory === 'all'
         ? Projects
         : Projects.filter(project => project.category === selectedCategory);
+
+
+    const handleImageClick = (image) => {
+        setSelectedImage(image);
+        setFlashboxVisible(true);
+    };
+
+    const closeFlashbox = () => {
+        setFlashboxVisible(false);
+        setSelectedImage(null);
+    };
+
 
     return (
         <div className='portfolio container'>
@@ -51,12 +66,20 @@ const PortfolioProjects = () => {
 
             <div className="project-main">
                 {filteredProjects.map((project, index) => (
-                    <div className='in' key={index}>
+                    <div onClick={() => handleImageClick(project.image)} className='in' key={index}>
                         <img src={project.image} alt={project.name} />
                         <h2>{project.name}</h2>
                     </div>
                 ))}
             </div>
+
+            {/* Flashbox for full-screen image */}
+            {isFlashboxVisible && (
+                <div className="flashbox" onClick={closeFlashbox}>
+                    <img src={selectedImage} alt="Selected Project" className="flashbox-image" />
+                    <button className="close-button" onClick={closeFlashbox}>X</button>
+                </div>
+            )}
         </div>
     );
 };

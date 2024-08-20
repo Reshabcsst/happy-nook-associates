@@ -544,6 +544,37 @@ h3 {
     display: flex;
     flex-direction: column;
 
+    .flashbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .flashbox-image {
+        max-width: 90%;
+        max-height: 90%;
+        object-fit: cover;
+    }
+
+    .close-button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: transparent;
+        color: white;
+        font-size: 24px;
+        border: none;
+        cursor: pointer;
+    }
+
+
     .upr {
         width: 100%;
         display: flex;
@@ -648,6 +679,10 @@ h3 {
                     .project-name {
                         font-size: 1.2rem;
                         font-weight: bold;
+
+                        @media screen and (max-width:500px) {
+                            font-size: .8rem;
+                        }
                     }
                 }
             }
@@ -1224,6 +1259,36 @@ h3 {
     padding: 5rem 15px;
     flex-direction: column;
 
+    .flashbox {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .flashbox-image {
+        max-width: 90%;
+        max-height: 90%;
+        object-fit: cover;
+    }
+
+    .close-button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: transparent;
+        color: white;
+        font-size: 24px;
+        border: none;
+        cursor: pointer;
+    }
+
     .tabs {
         display: flex;
         overflow-x: auto;
@@ -1370,7 +1435,8 @@ h3 {
                     margin: 0;
                 }
             }
-            .captcha{
+
+            .captcha {
                 flex: 1;
                 margin-top: 1rem;
                 transform: scale(1);

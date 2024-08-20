@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Projects from '../DemoData/Projects';
 import { useNavigate } from 'react-router-dom';
 
 const LatestProjects = () => {
+    const [isFlashboxVisible, setFlashboxVisible] = useState(false);
+    const [selectedImage, setSelectedImage] = useState(null);
     const navigate = useNavigate();
+
+    const handleImageClick = (image) => {
+        setSelectedImage(image);
+        setFlashboxVisible(true);
+    };
+
+    const closeFlashbox = () => {
+        setFlashboxVisible(false);
+        setSelectedImage(null);
+    };
+
     return (
         <div className='latest-projects container'>
             <div className="upr">
@@ -17,10 +30,11 @@ const LatestProjects = () => {
             </div>
             <div className="lwr">
                 <div className="gallery">
-                    {Projects.slice(0, 6).map((project, index) => (
+                    {Projects.slice(0, 6).map((project) => (
                         <div
                             key={project.id}
                             className="gallery-item"
+                            onClick={() => handleImageClick(project.image)}
                         >
                             <img
                                 src={project.image}
@@ -36,6 +50,14 @@ const LatestProjects = () => {
                 </div>
                 <button onClick={() => { navigate('/portfolio') }} className='button-contained'>See More</button>
             </div>
+
+            {/* Flashbox for full-screen image */}
+            {isFlashboxVisible && (
+                <div className="flashbox" onClick={closeFlashbox}>
+                    <img src={selectedImage} alt="Selected Project" className="flashbox-image" />
+                    <button className="close-button" onClick={closeFlashbox}>X</button>
+                </div>
+            )}
         </div>
     );
 };
