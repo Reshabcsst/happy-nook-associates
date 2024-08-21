@@ -19,7 +19,7 @@ const Footer = () => {
                         <h3>Company</h3>
                         <ul>
                             <li><Link to='/'>Home</Link></li>
-                              <li><Link to='/about'>About Us</Link></li>
+                            <li><Link to='/about'>About Us</Link></li>
                             <li><Link to='/what-we-do'>What We Do</Link></li>
                             <li><Link to='/portfolio'>Portfolio</Link></li>
                             <li><Link to='/contact'>Contact Us</Link></li>
@@ -44,6 +44,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <p className='right'>© 2024 Happy Nook Associates. All rights reserved.</p>
+                <p className='dev'>Developed by <a href="tel:+91 8585891309">Reshab</a></p>
             </div>
         </footer>
     );
