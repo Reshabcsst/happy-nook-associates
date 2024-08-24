@@ -7,7 +7,7 @@ const ContactCards = () => {
             <div className="st">
                 <LocationOnRounded />
                 <h3>Location</h3>
-                <p>11, Latoo Babu Lane. Kolkata-700006 (Opp. Bedon Street Post Office)</p>
+                <p>11, Latoo Babu Lane. Kolkata-700006 (Opp. Beadon Street Post Office)</p>
             </div>
             <div className="st">
                 <Call />

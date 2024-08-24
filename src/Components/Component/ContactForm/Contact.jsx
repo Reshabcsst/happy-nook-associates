@@ -121,7 +121,7 @@ const Contact = () => {
             <div className="rht">
                 <iframe
                     name='map'
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d319.1388610589409!2d88.36483976999067!3d22.590183848956585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a02779f4d0e8143%3A0xf5a6319b3bf8051e!2sSai%20Krishna%20Apartment!5e1!3m2!1sen!2sin!4v1723988872218!5m2!1sen!2sin"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d699.0882111599531!2d88.36451036949173!3d22.59019613692767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027700769a7791%3A0x6241bae020e28ac!2sHappy%20Nook%20Associates!5e1!3m2!1sen!2sin!4v1724310671275!5m2!1sen!2sin"
                     width="100%"
                     height="100%"
                     style={{ border: '0' }}
