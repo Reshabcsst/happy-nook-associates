@@ -1539,3 +1539,54 @@ h3 {
     }
 
 }
+
+
+
+
+
+.other-services {
+    width: 100%;
+    padding: 0 15px 5rem 15px;
+
+    .h {
+        font-size: 30px;
+        color: $Base-first-color;
+        font-weight: 600;
+        width: fit-content;
+        margin: 0 auto 4rem auto;
+
+        span {
+            color: $Base-second-color;
+        }
+    }
+
+
+    .in {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+        justify-content: space-between;
+
+        .srvs {
+            display: flex;
+            flex-direction: column;
+            gap: .5rem;
+            width: fit-content;
+
+            img{
+                height: 250px;
+                object-fit: cover;
+                width: 100%;
+                border-radius: 8px;
+                margin-bottom: 0.5rem;
+            }
+
+            p {
+                text-align: justify;
+                color: $global-color-text;
+            }
+        }
+    }
+
+
+}

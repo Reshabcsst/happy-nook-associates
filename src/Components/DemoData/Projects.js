@@ -16,6 +16,7 @@ import Project16 from '../Assets/All Projects/back side copy.jpg';
 import Project17 from '../Assets/All Projects/for send final.jpg';
 import Project18 from '../Assets/All Projects/new view 5 flor extra change file copy.jpg';
 import Project19 from '../Assets/All Projects/photo re edit 1.jpg';
+import Project20 from '../Assets/All Projects/Project220.jpeg';
 
 const Projects = [
     { id: 1, image: Project1, name: 'Royal Hotel', category: 'Hotels/Resorts' },
@@ -28,18 +29,19 @@ const Projects = [
     { id: 7, image: Project7, name: '15A Chidam Mudi Lane', category: 'Hotels/Resorts' },
     { id: 8, image: Project8, name: 'Raja Nabakrisna Street', category: 'Apartments/Condos' },
     { id: 9, image: Project9, name: 'Project Three', category: 'Apartments/Condos' },
-    { id: 10, image: Project10, name: 'Hari Ghoshel', category: 'Hotels/Resorts' },
+    { id: 10, image: Project10, name: 'Hari Ghoshal', category: 'Hotels/Resorts' },
     { id: 11, image: Project11, name: 'Project Five', category: 'Apartments/Condos' },
     { id: 12, image: Project12, name: 'Shri Baman Goswami Goudiya Math', category: 'Religious Facilities' },
 
     { id: 13, image: Project13, name: 'Raja Nabakrisna Street', category: 'Apartments/Condos' },
-    { id: 18, image: Project19, name: 'Project One', category: 'Mixed Use' },
+    { id: 14, image: Project19, name: 'Project One', category: 'Mixed Use' },
     { id: 15, image: Project15, name: 'Akshoy Kumar Dutta Sarani', category: 'Retrofit/Restoration' },
     { id: 16, image: Project16, name: 'Project Four', category: 'Office Buildings' },
     { id: 17, image: Project17, name: 'Project Five', category: 'Hotels/Resorts' },
     { id: 18, image: Project18, name: 'Project Six', category: 'Apartments/Condos' },
     { id: 19, image: Project19, name: 'Project One', category: 'Apartments/Condos' },
     { id: 20, image: Project7, name: 'Project Ten', category: 'Mixed Use' },
+    { id: 21, image: Project20, name: 'Project Eleven', category: 'Apartments/Condos' },
 ];
 
 export default Projects;

@@ -8,6 +8,7 @@ import Services from '../Component/OurServices/Services';
 import Sectors from '../Component/Sectors';
 import LatestProjects from '../Component/LatestProjects';
 import Testimonials from '../Component/Testimonials';
+import OtherServices from '../Component/OtherServices/OtherServices';
 
 const WhatWeDo = React.memo(() => {
     useEffect(() => {
@@ -18,6 +19,7 @@ const WhatWeDo = React.memo(() => {
         <div>
             <CommonBanner heading='What We Do' bg={bg} />
             <Services />
+            <OtherServices />
             <Sectors />
             <LatestProjects />
             <Testimonials />
