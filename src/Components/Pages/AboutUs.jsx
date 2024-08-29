@@ -1,13 +1,13 @@
-import React, { useEffect } from 'react';
-import Contact from '../Common/Contact';
-import CommonBanner from '../Common/CommonBanner';
+import React, { lazy, Suspense, useEffect } from 'react';
 import bg from '../Assets/AboutBanner.jpg';
 import rhtbg from '../Assets/AboutPage.jpg';
-import About from '../Component/About';
 import 'aos/dist/aos.css';
 import Aos from 'aos';
-import CEO from '../Component/CEO';
-import History from '../Component/AboutComponents/History';
+const CommonBanner = lazy(() => import('../Common/CommonBanner'));
+const Contact = lazy(() => import('../Common/Contact'));
+const About = lazy(() => import('../Component/About'));
+const CEO = lazy(() => import('../Component/CEO'));
+const History = lazy(() => import('../Component/AboutComponents/History'));
 
 const AboutUs = React.memo(() => {
     useEffect(() => {
@@ -29,18 +29,20 @@ const AboutUs = React.memo(() => {
     };
     return (
         <div>
-            <CommonBanner heading='About Us' bg={bg} />
-            <About
-                lfttxt='We exist to identify opportunities, overcome challenges, maximize potential, and achieve fulfillment.'
-                rhttxt1='At Happy Nook Associates (HNA), we strive to be an extension of your team, not just an engineering consultant. For 25 years our mission has been a commitment to providing the highest quality services, going above and beyond expectations. We are passionate about every project we do – whether it be a mid-rise or a site inspection.'
-                rhttxt2='With three offices we have an ever-growing pool of talent dedicated to collaboration with our clients, and with one another. Our multidisciplinary experience allows us to explore unconventional solutions and unique expertise. Understanding what issues are important to our clients and community is necessary in problem-solving. We make the difference.'
-                btntxt='Our History'
-                onClick={handleScrollToHistory}
-                rhtimg={rhtbg}
-            />
-            <CEO />
-            <History />
-            <Contact />
+            <Suspense fallback={<div style={{ margin: "auto", display: "flex", alignItems: "center", width: "fit-content", height: "100vh" }}>Loading...</div>}>
+                <CommonBanner heading='About Us' bg={bg} />
+                <About
+                    lfttxt='We exist to identify opportunities, overcome challenges, maximize potential, and achieve fulfillment.'
+                    rhttxt1='At Happy Nook Associates (HNA), we strive to be an extension of your team, not just an engineering consultant. For 25 years our mission has been a commitment to providing the highest quality services, going above and beyond expectations. We are passionate about every project we do – whether it be a mid-rise or a site inspection.'
+                    rhttxt2='With three offices we have an ever-growing pool of talent dedicated to collaboration with our clients, and with one another. Our multidisciplinary experience allows us to explore unconventional solutions and unique expertise. Understanding what issues are important to our clients and community is necessary in problem-solving. We make the difference.'
+                    btntxt='Our History'
+                    onClick={handleScrollToHistory}
+                    rhtimg={rhtbg}
+                />
+                <CEO />
+                <History />
+                <Contact />
+            </Suspense>
         </div>
     );
 });

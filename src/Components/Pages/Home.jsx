@@ -1,15 +1,17 @@
-import React, { useEffect } from 'react';
-import Banner from '../Common/Banner';
-import About from '../Component/About';
-import Services from '../Component/Services';
-import Sectors from '../Component/Sectors';
-import LatestProjects from '../Component/LatestProjects';
-import Testimonials from '../Component/Testimonials';
-import WhyChoseUs from '../Component/WhyChoseUs';
-import Contact from '../Common/Contact';
+import React, { lazy, Suspense, useEffect } from 'react';
 import 'aos/dist/aos.css';
 import Aos from 'aos';
-import CEO from '../Component/CEO';
+
+const Banner = lazy(() => import('../Common/Banner'));
+const About = lazy(() => import('../Component/About'));
+const Services = lazy(() => import('../Component/Services'));
+const Sectors = lazy(() => import('../Component/Sectors'));
+const LatestProjects = lazy(() => import('../Component/LatestProjects'));
+const Testimonials = lazy(() => import('../Component/Testimonials'));
+const WhyChoseUs = lazy(() => import('../Component/WhyChoseUs'));
+const Contact = lazy(() => import('../Common/Contact'));
+const CEO = lazy(() => import('../Component/CEO'));
+
 
 const Home = () => {
   useEffect(() => {
@@ -18,17 +20,19 @@ const Home = () => {
   }, [])
   return (
     <div>
-      <Banner />
-      <About />
-      <Services />
-      <Sectors />
-      <LatestProjects />
-      <Testimonials />
-      <WhyChoseUs />
-      <CEO />
-      <Contact />
+      <Suspense fallback={<div style={{margin:"auto",display:"flex",alignItems:"center",width:"fit-content",height:"100vh"}}>Loading...</div>}>
+        <Banner />
+        <About />
+        <Services />
+        <Sectors />
+        <LatestProjects />
+        <Testimonials />
+        <WhyChoseUs />
+        <CEO />
+        <Contact />
+      </Suspense>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

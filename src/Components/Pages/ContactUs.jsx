@@ -1,9 +1,9 @@
 import Aos from 'aos';
-import React, { useEffect } from 'react';
+import React, { lazy, Suspense, useEffect } from 'react';
 import bg from '../Assets/ContactBanner.jpg';
-import CommonBanner from '../Common/CommonBanner';
-import Contact from '../Component/ContactForm/Contact';
-import ContactCards from '../Component/ContactCards/ContactCards';
+const Contact = lazy(() => import('../Component/ContactForm/Contact'));
+const ContactCards = lazy(() => import('../Component/ContactCards/ContactCards'));
+const CommonBanner = lazy(() => import('../Common/CommonBanner'));
 
 const ContactUs = React.memo(() => {
   useEffect(() => {
@@ -12,9 +12,11 @@ const ContactUs = React.memo(() => {
   }, [])
   return (
     <div>
-      <CommonBanner heading='Contact Us' bg={bg} />
-      <Contact />
-      <ContactCards/>
+      <Suspense fallback={<div style={{ margin: "auto", display: "flex", alignItems: "center", width: "fit-content", height: "100vh" }}>Loading...</div>}>
+        <CommonBanner heading='Contact Us' bg={bg} />
+        <Contact />
+        <ContactCards />
+      </Suspense>
     </div>
   );
 });

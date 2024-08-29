@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
-import Contact from '../Common/Contact';
-import CommonBanner from '../Common/CommonBanner';
+import React, { lazy, Suspense, useEffect } from 'react';
 import bg from '../Assets/PortfolioBanner.jpg';
 import 'aos/dist/aos.css';
 import Aos from 'aos';
-import PortfolioProjects from '../Component/Portfolio/PortfolioProjects';
+const PortfolioProjects = lazy(() => import('../Component/Portfolio/PortfolioProjects'));
+const Contact = lazy(() => import('../Common/Contact'));
+const CommonBanner = lazy(() => import('../Common/CommonBanner'));
 
 const Portfolio = React.memo(() => {
   useEffect(() => {
@@ -13,9 +13,11 @@ const Portfolio = React.memo(() => {
   }, [])
   return (
     <div>
-      <CommonBanner heading='Portfolio' bg={bg} />
-      <PortfolioProjects />
-      <Contact />
+      <Suspense fallback={<div style={{ margin: "auto", display: "flex", alignItems: "center", width: "fit-content", height: "100vh" }}>Loading...</div>}>
+        <CommonBanner heading='Portfolio' bg={bg} />
+        <PortfolioProjects />
+        <Contact />
+      </Suspense>
     </div>
   );
 });

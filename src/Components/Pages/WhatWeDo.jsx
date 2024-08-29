@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react';
-import Contact from '../Common/Contact';
-import CommonBanner from '../Common/CommonBanner';
+import React, { lazy, Suspense, useEffect } from 'react';
 import bg from '../Assets/WhatweDobanner.jpg';
 import 'aos/dist/aos.css';
 import Aos from 'aos';
-import Services from '../Component/OurServices/Services';
-import Sectors from '../Component/Sectors';
-import LatestProjects from '../Component/LatestProjects';
-import Testimonials from '../Component/Testimonials';
-import OtherServices from '../Component/OtherServices/OtherServices';
+const Contact = lazy(() => import('../Common/Contact'));
+const CommonBanner = lazy(() => import('../Common/CommonBanner'));
+const Services = lazy(() => import('../Component/OurServices/Services'));
+const Sectors = lazy(() => import('../Component/Sectors'));
+const LatestProjects = lazy(() => import('../Component/LatestProjects'));
+const Testimonials = lazy(() => import('../Component/Testimonials'));
+const OtherServices = lazy(() => import('../Component/OtherServices/OtherServices'));
 
 const WhatWeDo = React.memo(() => {
     useEffect(() => {
@@ -17,13 +17,15 @@ const WhatWeDo = React.memo(() => {
     }, [])
     return (
         <div>
-            <CommonBanner heading='What We Do' bg={bg} />
-            <Services />
-            <OtherServices />
-            <Sectors />
-            <LatestProjects />
-            <Testimonials />
-            <Contact />
+            <Suspense fallback={<div style={{ margin: "auto", display: "flex", alignItems: "center", width: "fit-content", height: "100vh" }}>Loading...</div>}>
+                <CommonBanner heading='What We Do' bg={bg} />
+                <Services />
+                <OtherServices />
+                <Sectors />
+                <LatestProjects />
+                <Testimonials />
+                <Contact />
+            </Suspense>
         </div>
     );
 });
