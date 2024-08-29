@@ -22,7 +22,7 @@ const OtherServices = () => {
                 <div className="srvs">
                     <img src={PG} alt="PG" />
                     <h2>Naskar Villa Ladies PG</h2>
-                    <h3>ladies' PG</h3>
+                    <h3>Ladies' PG</h3>
                     <p>Naskar Villa Ladies PG is a comfortable and secure ladies' PG offering a home away from home. We provide fully air-conditioned rooms with attached kitchens, ensuring convenience for every resident. With 24-hour water supply and high-speed Wi-Fi, we cater to the needs of modern living. Our focus on safety and comfort makes us the ideal choice for women seeking a peaceful and well-equipped living environment.</p>
                     <button className='btn'>Know More<ArrowRightAlt /></button>
                 </div>
