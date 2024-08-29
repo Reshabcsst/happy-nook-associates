@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Projects from '../DemoData/Projects';
 import { useNavigate } from 'react-router-dom';
 
-const LatestProjects = () => {
+const LatestProjects = React.memo(() => {
     const [isFlashboxVisible, setFlashboxVisible] = useState(false);
     const [selectedImage, setSelectedImage] = useState(null);
     const navigate = useNavigate();
@@ -60,6 +60,6 @@ const LatestProjects = () => {
             )}
         </div>
     );
-};
+});
 
 export default LatestProjects;

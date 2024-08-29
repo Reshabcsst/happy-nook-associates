@@ -2,7 +2,7 @@ import React from 'react';
 import './Style.scss';
 import { useNavigate } from 'react-router-dom';
 
-const Contact = () => {
+const Contact = React.memo(() => {
     const navigate = useNavigate();
     return (
         <div className='contact-small'>
@@ -12,6 +12,6 @@ const Contact = () => {
             </div>
         </div>
     );
-};
+});
 
 export default Contact;

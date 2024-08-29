@@ -4,7 +4,7 @@ import PG from '../../Assets/pg.jpg';
 import Cafe from '../../Assets/cafe.jpg';
 import { ArrowRightAlt } from '@mui/icons-material';
 
-const OtherServices = () => {
+const OtherServices = React.memo(() => {
     return (
         <div className='other-services container'>
             <h2 className='h'>Our Other Services<span>.</span></h2>
@@ -39,6 +39,6 @@ const OtherServices = () => {
             </div>
         </div>
     );
-};
+});
 
 export default OtherServices;

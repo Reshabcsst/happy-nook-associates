@@ -1,7 +1,7 @@
 import React from 'react';
 import { MdOutlineKeyboardDoubleArrowRight } from 'react-icons/md';
 
-const Sectors = () => {
+const Sectors = React.memo(() => {
     return (
         <div className='sectors'>
             <div className="dt container">
@@ -29,6 +29,6 @@ const Sectors = () => {
             </div>
         </div>
     );
-};
+});
 
 export default Sectors;

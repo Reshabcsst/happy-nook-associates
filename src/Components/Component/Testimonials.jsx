@@ -4,7 +4,7 @@ import 'react-multi-carousel/lib/styles.css';
 import img from '../Assets/Testimonials.png';
 import TestimonialsData from '../DemoData/TestimonialsData';
 
-const Testimonials = () => {
+const Testimonials = React.memo(() => {
     const responsive = {
         superLargeDesktop: {
             breakpoint: { max: 4000, min: 3000 },
@@ -58,6 +58,6 @@ const Testimonials = () => {
             </div>
         </div>
     );
-};
+});
 
 export default Testimonials;

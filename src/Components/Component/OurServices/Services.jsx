@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import servicesData from '../../DemoData/servicesData';
 
-const Services = () => {
+const Services = React.memo(() => {
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleAccordion = (index) => {
@@ -31,6 +31,6 @@ const Services = () => {
       ))}
     </div>
   );
-};
+});
 
 export default Services;
