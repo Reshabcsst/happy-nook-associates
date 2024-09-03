@@ -31,8 +31,8 @@ const OtherServices = React.memo(() => {
 
                 <div className="srvs">
                     <img src={Cafe} alt="Cafe" />
-                    <h2>Desbandhu cafe</h2>
-                    <h3>Multi Purpose Cafe</h3>
+                    <h2>rajbari banquet and cafe</h2>
+                    <h3>Banquet & Cafe</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat culpa laudantium suscipit aspernatur, magnam laboriosam dolor eius incidunt magni officiis porro expedita labore hic deserunt. Magni ut molestiae ex repudiandae nam omnis cum sequi quidem beatae. Velit quisquam recusandae ut, nostrum alias error cumque. Fugiat consequatur nisi quasi unde similique assumenda dolorem repudiandae culpa sint sapiente, ipsa, cumque magnam nemo obcaecati hic! Vel, atque ratione?</p>
                     <button className='btn'>Know More<ArrowRightAlt /></button>
                 </div>
