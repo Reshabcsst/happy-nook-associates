@@ -33,12 +33,10 @@ const OtherServices = React.memo(() => {
 
                 <div className="srvs">
                     <img src={Cafe} alt="Cafe" />
-                    <h2>Rajbari Banquet & Café</h2>
-                    <h3>Banquet & Cafe</h3>
-                    <p>Welcome to Rajbari Banquet & Café—where elegance meets comfort. Nestled in the heart of the city Raidighi Kankandighi, Rajbari Banquet & Café offers a perfect blend of sophisticated ambiance and warm hospitality. Whether you're planning a grand celebration, a corporate event, or simply looking for a cozy spot to enjoy delightful culinary creations, our versatile venue and attentive service promise a memorable experience.</p>
-                    <button className='btn' onClick={() => { window.open('https://rajbari-banquet-cafe.web.app', '_blank'); }}>
-                        Know More <ArrowRightAlt />
-                    </button>
+                    <h2>Desbandhu cafe</h2>
+                    <h3>Multi Purpose Cafe</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat culpa laudantium suscipit aspernatur, magnam laboriosam dolor eius incidunt magni officiis porro expedita labore hic deserunt. Magni ut molestiae ex repudiandae nam omnis cum sequi quidem beatae. Velit quisquam recusandae ut, nostrum alias error cumque. Fugiat consequatur nisi quasi unde similique assumenda dolorem repudiandae culpa sint sapiente, ipsa, cumque magnam nemo obcaecati hic! Vel, atque ratione?</p>
+                    <button className='btn'>Know More<ArrowRightAlt /></button>
                 </div>
             </div>
         </div>

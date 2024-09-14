@@ -15,8 +15,8 @@ const ContactCards = () => {
                 <a href="tel:+91 9433119893">
                     <span>+91 94331-19893</span>
                 </a>
-                <a href="tel:+91 9836075869">
-                    <span>+91 98360-75869</span>
+                <a href="tel:+91 9836075849">
+                    <span>+91 98360-75849</span>
                 </a>
             </div>
             <div className="st">
