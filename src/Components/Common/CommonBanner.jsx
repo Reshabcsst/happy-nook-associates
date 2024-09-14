@@ -1,7 +1,6 @@
 import React from 'react';
 import { MdOutlineKeyboardDoubleArrowRight } from 'react-icons/md';
 import { Link, useLocation } from 'react-router-dom';
-import './Style.scss';
 
 const CommonBanner = ({ heading, bg }) => {
     const { pathname } = useLocation();

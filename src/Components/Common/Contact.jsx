@@ -1,5 +1,4 @@
 import React from 'react';
-import './Style.scss';
 import { useNavigate } from 'react-router-dom';
 
 const Contact = React.memo(() => {

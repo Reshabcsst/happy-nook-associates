@@ -5,7 +5,6 @@ import Pic4 from '../Assets/Bg.jpg';
 import Pic6 from '../Assets/Bg2.jpg';
 import Pic8 from '../Assets/Bg4.jpg';
 import Pic9 from '../Assets/Bg5.jpg';
-import './Style.scss';
 import { useNavigate } from 'react-router-dom';
 
 const Banner = React.memo(() => {

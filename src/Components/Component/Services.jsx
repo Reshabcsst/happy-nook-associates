@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
-import './Styles.scss';
 import Aos from 'aos';
 import { useNavigate } from 'react-router-dom';
 import updatedServicesData from '../DemoData/ServiceDataForHome';

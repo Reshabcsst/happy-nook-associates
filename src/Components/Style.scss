@@ -595,3 +595,105 @@ footer {
         font-size: 13px;
     }
 }
+
+
+// PG
+$primary-color: #ff5722;
+$background-overlay: rgba(0, 0, 0, 0.5);
+$footer-background: #333;
+$white: #fff;
+$service-icon-size: 50px; // Size of service icons
+$amenity-icon-size: 30px; // Size of amenity icons
+
+.pg-about, .pg-services, .amenities, .pg-testimonials, .pg-gallery, .pg-contact {
+    padding: 15px;
+    margin: 0 auto;
+    max-width: 1285px;
+    width: 100%;
+  }
+  
+  // About Section
+  .aboutImage {
+    width: 100%;
+    height: auto;
+  }
+  
+  // Services Section
+  .pg-services {
+    .serviceCard {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+  
+      .serviceIcon {
+        width: $service-icon-size;
+        height: $service-icon-size;
+        margin-right: 15px;
+      }
+    }
+  }
+  
+  // Amenities Section
+  .amenities {
+    .amenity {
+      display: flex;
+      align-items: center;
+      margin: 10px 0;
+  
+      .amenityIcon {
+        width: $amenity-icon-size;
+        height: $amenity-icon-size;
+        margin-right: 10px;
+      }
+    }
+  }
+  
+  // Testimonials Section
+  .pg-testimonials {
+    .testimonialSlider {
+      // Add styles for testimonial slider here
+    }
+  
+    .testimonial {
+      margin: 10px 0;
+    }
+  }
+  
+  // Contact Form
+  .contactForm {
+    display: flex;
+    flex-direction: column;
+  
+    .submitButton {
+      background-color: $primary-color;
+      color: $white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+  
+  // Map
+  .map {
+    height: 300px;
+    width: 100%;
+  }
+  
+  // Footer
+  .footer {
+    background-color: $footer-background;
+    color: $white;
+    text-align: center;
+    padding: 10px;
+  
+    .socialMedia {
+      margin-top: 10px;
+  
+      .socialLink {
+        color: $white;
+        margin: 0 10px;
+        text-decoration: none;
+      }
+    }
+  }

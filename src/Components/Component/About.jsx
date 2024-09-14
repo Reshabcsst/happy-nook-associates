@@ -1,5 +1,4 @@
 import React from 'react';
-import './Styles.scss';
 import about from '../Assets/About-img.jpg';
 import { useNavigate } from 'react-router-dom';
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import './Style.scss';
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
 import { RiTwitterXLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';

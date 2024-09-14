@@ -1,6 +1,5 @@
 import React from 'react';
 import bg from '../Assets/CEO.jpg';
-import './Styles.scss';
 
 const CEO = () => {
     return (

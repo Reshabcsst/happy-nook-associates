@@ -3,8 +3,10 @@ import AA from '../../Assets/construction.jpg';
 import PG from '../../Assets/pg.jpg';
 import Cafe from '../../Assets/cafe.jpg';
 import { ArrowRightAlt } from '@mui/icons-material';
+import { useNavigate } from 'react-router-dom';
 
 const OtherServices = React.memo(() => {
+    const navigate = useNavigate();
     return (
         <div className='other-services container'>
             <h2 className='h'>Our Other Services<span>.</span></h2>
@@ -24,17 +26,19 @@ const OtherServices = React.memo(() => {
                     <h2>Naskar Villa Ladies PG</h2>
                     <h3>Ladies' PG</h3>
                     <p>Naskar Villa Ladies PG is a comfortable and secure ladies' PG offering a home away from home. We provide fully air-conditioned rooms with attached kitchens, ensuring convenience for every resident. With 24-hour water supply and high-speed Wi-Fi, we cater to the needs of modern living. Our focus on safety and comfort makes us the ideal choice for women seeking a peaceful and well-equipped living environment.</p>
-                    <button className='btn'>Know More<ArrowRightAlt /></button>
+                    <button className='btn' onClick={() => { navigate('/pg'); }}>Know More<ArrowRightAlt /></button>
                 </div>
 
 
 
                 <div className="srvs">
                     <img src={Cafe} alt="Cafe" />
-                    <h2>Desbandhu cafe</h2>
-                    <h3>Multi Purpose Cafe</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat culpa laudantium suscipit aspernatur, magnam laboriosam dolor eius incidunt magni officiis porro expedita labore hic deserunt. Magni ut molestiae ex repudiandae nam omnis cum sequi quidem beatae. Velit quisquam recusandae ut, nostrum alias error cumque. Fugiat consequatur nisi quasi unde similique assumenda dolorem repudiandae culpa sint sapiente, ipsa, cumque magnam nemo obcaecati hic! Vel, atque ratione?</p>
-                    <button className='btn'>Know More<ArrowRightAlt /></button>
+                    <h2>Rajbari Banquet & Café</h2>
+                    <h3>Banquet & Cafe</h3>
+                    <p>Welcome to Rajbari Banquet & Café—where elegance meets comfort. Nestled in the heart of the city Raidighi Kankandighi, Rajbari Banquet & Café offers a perfect blend of sophisticated ambiance and warm hospitality. Whether you're planning a grand celebration, a corporate event, or simply looking for a cozy spot to enjoy delightful culinary creations, our versatile venue and attentive service promise a memorable experience.</p>
+                    <button className='btn' onClick={() => { window.open('https://rajbari-banquet-cafe.web.app', '_blank'); }}>
+                        Know More <ArrowRightAlt />
+                    </button>
                 </div>
             </div>
         </div>

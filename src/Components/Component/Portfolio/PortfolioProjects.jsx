@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import '../Styles.scss';
 import Projects from '../../DemoData/Projects';
 
 const PortfolioProjects = () => {
