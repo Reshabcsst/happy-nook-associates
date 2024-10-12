@@ -170,7 +170,6 @@ const LadiesPG = () => {
                     <input
                         name='subject'
                         type="text"
-                        placeholder='Subject'
                         value={formData.subject}
                         onChange={handleInputChange}
                     />
