@@ -9,7 +9,87 @@ import wifi from '../Assets/wifi.png';
 import Laundry from '../Assets/Laundry.png';
 import CommonBanner from '../Common/CommonBanner';
 import emailjs from 'emailjs-com';
+import img1 from '../Assets/PGImages/bg.jpeg';
+import img2 from '../Assets/PGImages/bg1.jpeg';
+import img3 from '../Assets/PGImages/br.jpeg';
+import img4 from '../Assets/PGImages/br1.jpeg';
+import img5 from '../Assets/PGImages/br2.jpeg';
+import img6 from '../Assets/PGImages/kit.jpeg';
+import img7 from '../Assets/PGImages/rm.jpeg';
+import img8 from '../Assets/PGImages/rm1.jpeg';
+import img9 from '../Assets/PGImages/rm2.jpeg';
+import img10 from '../Assets/PGImages/rm3.jpeg';
+import img11 from '../Assets/PGImages/rm4.jpeg';
+import img12 from '../Assets/PGImages/rm5.jpeg';
+import img13 from '../Assets/PGImages/rm6.jpeg';
+import img14 from '../Assets/PGImages/rm7.jpeg';
+import img15 from '../Assets/PGImages/rm8.jpeg';
+import img16 from '../Assets/PGImages/rm9.jpeg';
+import img17 from '../Assets/PGImages/st.jpeg';
+import img18 from '../Assets/PGImages/tl.jpeg';
+import img19 from '../Assets/PGImages/tl1.jpeg';
 import Aos from 'aos';
+
+
+const GalleryImages = [
+    {
+        img: img1
+    },
+    {
+        img: img2
+    },
+    {
+        img: img3
+    },
+    {
+        img: img4
+    },
+    {
+        img: img5
+    },
+    {
+        img: img6
+    },
+    {
+        img: img7
+    },
+    {
+        img: img8
+    },
+    {
+        img: img9
+    },
+    {
+        img: img10
+    },
+    {
+        img: img11
+    },
+    {
+        img: img12
+    },
+    {
+        img: img13
+    },
+    {
+        img: img14
+    },
+    {
+        img: img15
+    },
+    {
+        img: img16
+    },
+    {
+        img: img17
+    },
+    {
+        img: img18
+    },
+    {
+        img: img19
+    }
+];
 
 const LadiesPG = () => {
     useEffect(() => {
@@ -76,7 +156,7 @@ const LadiesPG = () => {
             {/* About Us Section */}
             <section id="about" className='pg-about'>
                 <h2>About Us</h2>
-                <p>Naskar Villa Ladies PG is a comfortable and secure ladies' PG offering a home away from home. We provide fully air-conditioned rooms with attached kitchens, ensuring convenience for every resident. With 24-hour water supply and high-speed Wi-Fi, we cater to the needs of modern living. Our focus on safety and comfort makes us the ideal choice for women seeking a peaceful and well-equipped living environment.</p>
+                <p>Hi, Thank you for contacting Naskar Villa ladies pg. We would be delighted to help you with your querry Please call contact 9836075849,7003513253 further discussion.Our PG is located at the 30 Matkal 1st bye  lane dum dum cant kolkata 700065. Have a Good Day ! Naskar Villa Ladies PG is a comfortable and secure ladies' PG offering a home away from home. We provide fully air-conditioned rooms with attached kitchens, ensuring convenience for every resident. With 24-hour water supply and high-speed Wi-Fi, we cater to the needs of modern living. Our focus on safety and comfort makes us the ideal choice for women seeking a peaceful and well-equipped living environment.</p>
                 <img src={pg} alt="Hostel Interior" className='aboutImage' />
             </section>
 
@@ -128,9 +208,11 @@ const LadiesPG = () => {
             <section id="gallery" className='pg-gallery'>
                 <h2>Gallery</h2>
                 <div className='galleryGrid'>
-                    <img src="room1.jpg" alt="Room 1" className='galleryImage' />
-                    <img src="room2.jpg" alt="Room 2" className='galleryImage' />
-                    {/* Add more images as needed */}
+                    {GalleryImages.map((image, index) => {
+                        return (
+                            <img src={image.img} alt={index + 1} className='galleryImage' />
+                        )
+                    })}
                 </div>
             </section>
 
@@ -186,10 +268,12 @@ const LadiesPG = () => {
 
                     <button type="submit" className='submitButton'>Send Message</button>
                 </form>
-                <p>123 Naskar Street, City, State, ZIP</p>
-                <p>(123) 456-7890</p>
-                <p>info@naskartvilla.com</p>
-                <div id="map" className='map'></div> {/* Embed Google Map here */}
+                <p>30 Matkal 1st bye  lane dum dum cant kolkata 700065.</p>
+                <p>+91 9836075849, +91 7003513253</p>
+                <p>ashisnaskar379@gmail.com</p>
+                <div id="map" className='map'>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d384.15765464567966!2d88.40422060996588!3d22.64781830115704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1sen!2sin!4v1731934826477!5m2!1sen!2sin" style={{height:"100%",width:"100%",border:"0"}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
             </section>
         </div>
     )
