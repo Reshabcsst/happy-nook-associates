@@ -1,6 +1,7 @@
 import React, { lazy, Suspense, useEffect } from 'react';
 import bg from '../Assets/AboutBanner.jpg';
 import rhtbg from '../Assets/AboutPage.jpg';
+import { Helmet } from 'react-helmet';
 import 'aos/dist/aos.css';
 import Aos from 'aos';
 const CommonBanner = lazy(() => import('../Common/CommonBanner'));
@@ -12,7 +13,6 @@ const History = lazy(() => import('../Component/AboutComponents/History'));
 const AboutUs = React.memo(() => {
     useEffect(() => {
         Aos.init({ duration: 1000, once: true, offset: 80 });
-        document.title = "About - Happy Nook Associates | Building Development | Engineering Consultant | Engineers";
     }, [])
 
 
@@ -29,6 +29,30 @@ const AboutUs = React.memo(() => {
     };
     return (
         <div>
+            {/* SEO Optimization */}
+            <Helmet>
+                <title>About Us - Happy Nook Associates | Building Development | Engineering Consultant</title>
+                <meta name="description" content="Learn about Happy Nook Associates, a trusted engineering consultant with 25 years of experience in building development and engineering solutions." />
+                <meta name="keywords" content="Engineering Consultant, Building Development, Structural Engineering, Construction Services" />
+                <meta name="author" content="Happy Nook Associates" />
+
+                {/* Open Graph (Facebook, LinkedIn) */}
+                <meta property="og:title" content="About Us - Happy Nook Associates" />
+                <meta property="og:description" content="Discover how Happy Nook Associates has been providing expert engineering consulting and building development solutions for over 25 years." />
+                <meta property="og:image" content={bg} />
+                <meta property="og:url" content="https://happynookassociates.com/about" />
+                <meta property="og:type" content="website" />
+
+                {/* Twitter Card */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="About Us - Happy Nook Associates" />
+                <meta name="twitter:description" content="Learn about our 25+ years of expertise in building development and engineering consultancy." />
+                <meta name="twitter:image" content={bg} />
+
+                {/* Mobile Optimization */}
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            </Helmet>
+
             <Suspense fallback={<div style={{ margin: "auto", display: "flex", alignItems: "center", width: "fit-content", height: "100vh" }}>Loading...</div>}>
                 <CommonBanner heading='About Us' bg={bg} />
                 <About

@@ -16,7 +16,7 @@ const Services = React.memo(() => {
       {servicesData.map((service, index) => (
         <div key={index} className="st">
           <div className="lft">
-            <img src={service.img} alt={service.title} />
+            <img src={service.img} alt={service.title} loading="lazy" />
           </div>
           <div className={`rht ${activeIndex === index ? 'active' : ''}`}>
             <h4 onClick={() => toggleAccordion(index)}>{service.title}</h4>

@@ -54,7 +54,7 @@ const LatestProjects = React.memo(() => {
             {/* Flashbox for full-screen image */}
             {isFlashboxVisible && (
                 <div className="flashbox" onClick={closeFlashbox}>
-                    <img src={selectedImage} alt="Selected Project" className="flashbox-image" />
+                    <img src={selectedImage} alt="Selected Project" loading="lazy" className="flashbox-image" />
                     <button className="close-button" onClick={closeFlashbox}>X</button>
                 </div>
             )}

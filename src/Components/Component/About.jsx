@@ -39,7 +39,7 @@ const About = ({ rhttxt1, rhttxt2, lfttxt, btntxt, rhtimg, onClick }) => {
                 </div>
             </div>
             <div data-aos="fade-up" className="rht">
-                <img src={rhtimg ? rhtimg : about} alt="about" />
+                <img src={rhtimg ? rhtimg : about} alt="about" loading="lazy" />
             </div>
         </div>
     );

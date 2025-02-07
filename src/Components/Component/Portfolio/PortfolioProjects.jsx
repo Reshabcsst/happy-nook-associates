@@ -66,7 +66,7 @@ const PortfolioProjects = () => {
             <div className="project-main">
                 {filteredProjects.map((project, index) => (
                     <div onClick={() => handleImageClick(project.image)} className='in' key={index}>
-                        <img src={project.image} alt={project.name} />
+                        <img src={project.image} alt={project.name} loading="lazy" />
                         <h2>{project.name}</h2>
                     </div>
                 ))}

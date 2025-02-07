@@ -52,7 +52,7 @@ const Testimonials = React.memo(() => {
                         </Carousel>
                     </div>
                     <div className="rht-sec">
-                        <img src={img} alt="Testimonials" />
+                        <img loading="lazy" src={img} alt="Testimonials" />
                     </div>
                 </div>
             </div>

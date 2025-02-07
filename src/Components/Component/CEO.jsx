@@ -5,7 +5,7 @@ const CEO = () => {
     return (
         <div className='ceo container'>
             <div className="lft">
-                <img data-aos='fade-right' src={bg} alt="CEO" />
+                <img data-aos='fade-right' src={bg} loading="lazy" alt="CEO" />
                 <p>Ashis Naskar</p>
                 <small>Signature</small>
             </div>
