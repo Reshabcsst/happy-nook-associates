@@ -266,7 +266,7 @@ const LadiesPG = () => {
                 <div className='galleryGrid'>
                     {GalleryImages.map((image, index) => {
                         return (
-                            <img src={image.img} alt={index + 1} loading="lazy" className='galleryImage' />
+                            <img key={index} src={image.img} alt={index + 1} loading="lazy" className='galleryImage' />
                         )
                     })}
                 </div>
