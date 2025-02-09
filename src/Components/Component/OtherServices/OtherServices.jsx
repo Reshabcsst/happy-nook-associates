@@ -36,7 +36,7 @@ const OtherServices = React.memo(() => {
                     <h2>Rajbari Banquet & Café</h2>
                     <h3>Banquet & Cafe</h3>
                     <p>Welcome to Rajbari Banquet & Café—where elegance meets comfort. Nestled in the heart of the city Raidighi Kankandighi, Rajbari Banquet & Café offers a perfect blend of sophisticated ambiance and warm hospitality. Whether you're planning a grand celebration, a corporate event, or simply looking for a cozy spot to enjoy delightful culinary creations, our versatile venue and attentive service promise a memorable experience.</p>
-                    <button className='btn' onClick={() => { window.open('https://rajbari-banquet-cafe.web.app', '_blank'); }}>
+                    <button className='btn' onClick={() => { window.open('https://rajbaribanquetandcafe.happynookassociates.com', '_blank'); }}>
                         Know More <ArrowRightAlt />
                     </button>
                 </div>
