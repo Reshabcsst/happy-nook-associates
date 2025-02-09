@@ -51,7 +51,7 @@ const Banner = React.memo(() => {
         <div className="carousel">
             <img
                 src={images[activeIndex]}
-                alt={`Slide ${activeIndex}`}
+                alt="Sanction Planning in Kolkata by Best Architects"
                 className="carousel__img"
                 loading="lazy"
             />

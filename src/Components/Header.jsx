@@ -54,7 +54,7 @@ const Header = () => {
                     <ul className={`nav-links ${isSidebarOpen ? 'open' : ''}`}>
                         <li><Link onClick={toggleSidebar} to='/'>Home</Link></li>
                         <li><Link onClick={toggleSidebar} to='/about'>About Us</Link></li>
-                        <li><Link onClick={toggleSidebar} to='/what-we-do'>What We Do</Link></li>
+                        <li><Link onClick={toggleSidebar} title="Our Architecture Services in Kolkata" to='/what-we-do'>What We Do</Link></li>
                         <li><Link onClick={toggleSidebar} to='/portfolio'>Portfolio</Link></li>
                         <li><Link onClick={toggleSidebar} to='/contact'>Contact Us</Link></li>
                         <li><Link onClick={toggleSidebar} to='/contact' className="btn">Get Started</Link></li>

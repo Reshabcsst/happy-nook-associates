@@ -21,9 +21,9 @@ const Home = () => {
   return (
     <div>
       <Helmet>
-        <title>Happy Nook Associates | Building Development | Engineering Consultant</title>
-        <meta name="description" content="Happy Nook Associates provides expert engineering consulting and building development services. Trusted by clients for 25+ years." />
-        <meta name="keywords" content="Engineering Consultant, Building Development, Structural Engineering, Construction Services, Urban Planning" />
+        <title>Top Architecture Firm in Kolkata | Fast Sanction Planning & Building Development | Engineering Consultant</title>
+        <meta name="description" content="Looking for the best architecture firm in Kolkata? We specialize in fast KMC sanction planning, high-quality building development, and efficient approvals. Get your project done quickly and professionally!" />
+        <meta name="keywords" content="building developer in Kolkata, best building developer in Kolkata, construction company in Kolkata, fast KMC sanction in Kolkata, KMC building plan sanction Kolkata, sanction planning consultant Kolkata, building plan approval in Kolkata, KMC sanction process Kolkata, architecture firms in Kolkata, Engineering Consultant, Building Development, Structural Engineering, Construction Services, Urban Planning, LBS in Kolkata, Kolkata municipal corporation building sanction, quick building approval Kolkata,  affordable building developer Kolkata, residential building developer in Kolkata, commercial building approval in Kolkata, residential building developer in Kolkata, commercial building approval in Kolkata,  fast construction permit Kolkata, how to get building sanction fast in Kolkata, KMC online building sanction process, building developer near me Kolkata, sanction approval expert Kolkata, best KMC sanction planner Kolkata, fast-track building plan approval Kolkata,  real estate project developer Kolkata" />
         <meta name="author" content="Happy Nook Associates" />
 
         {/* Open Graph (Facebook, LinkedIn) */}
@@ -51,13 +51,21 @@ const Home = () => {
             "name": "Happy Nook Associates",
             "url": "https://happynookassociates.com",
             "logo": "https://happynookassociates.com/static/media/Logo-dark.f1d540001eaccbe51993.png",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "11, Latoo Babu Lane. Kolkata-700006 (Opp. Beadon Street Post Office)",
+              "addressLocality": "Kolkata",
+              "addressRegion": "WB",
+              "postalCode": "700006",
+              "addressCountry": "IN"
+            },
             "description": "Happy Nook Associates provides expert engineering consulting and building development services. Trusted by clients for 25+ years.",
             "contactPoint": {
               "@type": "ContactPoint",
               "telephone": "+91 9836075849",
               "contactType": "customer service",
               "areaServed": "IN",
-              "availableLanguage": "English"
+              "availableLanguage": "Bengali, Hindi, English"
             },
             "sameAs": [
               "https://www.facebook.com/share/HBqbZKLFhBunMQUH",
