@@ -14,7 +14,7 @@ const About = ({ rhttxt1, rhttxt2, lfttxt, btntxt, rhtimg, onClick }) => {
                         <p>{lfttxt}</p>
                         :
                         <p>
-                            Happy Nook Associates works to create architectural plans related to buildings as well as Structural Designs and deals with construction related matters and Development.
+                            Happy Nook Associates specializes in architectural planning, structural design, and construction development, with a strong focus on fast KMC sanction approvals. We streamline the building approval process, ensuring quick and hassle-free approvals. Our expert team delivers reliable engineering solutions for residential, commercial, and industrial projects.
                         </p>
                     }
                 </div>
