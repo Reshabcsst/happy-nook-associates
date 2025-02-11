@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { FaBars } from 'react-icons/fa';
 import LogoDark from './Assets/Logo-dark.png';
@@ -17,11 +17,12 @@ const Header = () => {
         setIsScrolled(window.scrollY > 70);
     };
 
-    const handleClickOutside = (event) => {
+    // Use useCallback to prevent function recreation on every render
+    const handleClickOutside = useCallback((event) => {
         if (isSidebarOpen && !event.target.closest('.bottom-nav')) {
             setIsSidebarOpen(false);
         }
-    };
+    }, [isSidebarOpen]);
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
@@ -31,7 +32,7 @@ const Header = () => {
             window.removeEventListener('scroll', handleScroll);
             document.removeEventListener('click', handleClickOutside);
         };
-    }, [isSidebarOpen, handleClickOutside]);
+    }, [handleClickOutside]); // Only re-run when `handleClickOutside` changes
 
     return (
         <header>
