@@ -16,7 +16,7 @@ const OtherServices = React.memo(() => {
                     <h2>Ashis & Associates</h2>
                     <h3>Building Developer</h3>
                     <p>Ashis & Associates is a premier building development company dedicated to transforming visions into reality. With a commitment to excellence and a passion for innovation, we specialize in creating high-quality residential and commercial properties that stand the test of time. Our experienced team works closely with clients to deliver projects that not only meet but exceed expectations. At Ashis & Associates, we believe in building more than just structures—we build lasting relationships and communities.</p>
-                    <button className='btn'>Know More<ArrowRightAlt /></button>
+                    <button className='btn' onClick={() => { navigate('/building-development'); }}>Know More<ArrowRightAlt /></button>
                 </div>
 
 

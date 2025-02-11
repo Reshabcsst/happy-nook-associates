@@ -1,5 +1,6 @@
 import Header from './Components/Header';
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import BuildingDevelopmentLanding from './Components/Pages/BuildingDevelopmentLanding';
 import Home from './Components/Pages/Home';
 import '../src/Components/Style.scss';
 import '../src/Components/Component/Styles.scss';
@@ -24,6 +25,7 @@ function App() {
           <Route path='/what-we-do' element={<WhatWeDo />} />
           <Route path='/portfolio' element={<Portfolio />} />
           <Route path='/contact' element={<ContactUs />} />
+          <Route path='/building-development' element={<BuildingDevelopmentLanding />} />
           <Route path='/pg' element={<LadiesPG />} />
           <Route path='*' element={<Navigate to="/" />} />
         </Routes>
