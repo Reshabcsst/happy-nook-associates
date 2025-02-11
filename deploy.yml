@@ -1,0 +1,42 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - New-UI-design  # Trigger on pushes to the main branch
+
+jobs:
+
+  build_and_deploy_frontend:
+    name: Deploy Frontend to Firebase
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout repository
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Step 2: Install Node.js
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    # Step 3: Install dependencies
+    - name: Install dependencies
+      run: npm install
+      working-directory: ui
+
+    # Step 4: Build the frontend
+    - name: Build the frontend
+      run: npm run build
+      working-directory: ui
+
+    # Step 5: Deploy to Firebase
+    - name: Deploy to Firebase
+      uses: FirebaseExtended/action-hosting-deploy@v0
+      with:
+        firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        projectId: new-movie1
+        entryPoint: ui
+        channelId: live
