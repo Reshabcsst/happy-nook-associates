@@ -1,8 +1,9 @@
 name: Deploy React App to Hostinger
-run-name: ${{ github.actor }} is Deploy React App to Hostinger 🚀
+run-name: ${{ github.actor }} is Deploying React App to Hostinger 🚀
 on: [push]
+
 jobs:
-  Explore-GitHub-Actions:
+  deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -12,9 +13,18 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
+          cache: 'npm'  # This caches node_modules automatically
+
+      - name: Cache node_modules
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci  # Use `npm ci` for faster installation (skips package re-evaluation)
 
       - name: Build React app
         run: npm run build
@@ -22,7 +32,7 @@ jobs:
       - name: Upload files to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
-          server: ${{ secrets.FTP_HOST }}
+          server: "ftp.happynookassociates.com"
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: build/
