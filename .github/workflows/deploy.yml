@@ -1,6 +1,11 @@
 name: Deploy React App to Hostinger
 run-name: ${{ github.actor }} is Deploy React App to Hostinger 🚀
-on: [push]
+on: 
+ push:
+    branches:
+      - main
+
+      
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest

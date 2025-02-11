@@ -32,7 +32,7 @@ const Banner = React.memo(() => {
         return () => {
             clearInterval(autoPlayInterval);
         };
-    }, []);
+    }, [nextSlide]);
 
     useEffect(() => {
         const preloadImages = () => {

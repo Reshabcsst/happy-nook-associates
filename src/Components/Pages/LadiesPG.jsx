@@ -328,7 +328,7 @@ const LadiesPG = () => {
                 <p>📞 +91 9836075849, +91 7003513253</p>
                 <p>📧 ashisnaskar379@gmail.com</p>
                 <div id="map" className='map'>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d384.15765464567966!2d88.40422060996588!3d22.64781830115704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1sen!2sin!4v1731934826477!5m2!1sen!2sin" style={{ height: "100%", width: "100%", border: "0" }} allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d384.15765464567966!2d88.40422060996588!3d22.64781830115704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1sen!2sin!4v1731934826477!5m2!1sen!2sin" style={{ height: "100%", width: "100%", border: "0" }}  title='ladies PG' allowfullscreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </section>
         </div>

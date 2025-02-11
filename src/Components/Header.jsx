@@ -31,7 +31,7 @@ const Header = () => {
             window.removeEventListener('scroll', handleScroll);
             document.removeEventListener('click', handleClickOutside);
         };
-    }, [isSidebarOpen]);
+    }, [isSidebarOpen, handleClickOutside]);
 
     return (
         <header>
