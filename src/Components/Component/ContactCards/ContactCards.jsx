@@ -22,8 +22,8 @@ const ContactCards = () => {
             <div className="st">
                 <Mail />
                 <h3>Email Address</h3>
-                <a href="mailto:ashisnaskar379@gmail.com">
-                    <span>ashisnaskar379@gmail.com</span>
+                <a href="mailto:ashisnaskar379@happynookassociates.com">
+                    <span>ashisnaskar379@happynookassociates.com</span>
                 </a>
             </div>
         </div>
